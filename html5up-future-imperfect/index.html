@@ -1,280 +1,222 @@
 <!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Vaishnavi Tiwari | Data Science Portfolio</title>
+		<title>Projects | Vaishnavi Tiwari</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Vaishnavi Tiwari</a></h1>
-						<nav class="links">
-							<ul>
-								<li><a href="#intro">About</a></li>
-								<li><a href="#main">Projects</a></li>
-								<li><a href="#skills">Skills</a></li>
-								<li><a href="#footer">Contact</a></li>
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Vaishnavi Tiwari</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="about.html">About</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="skills.html">Skills</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+					<nav class="main">
+						<ul>
+							<li class="menu">
+								<a class="fa-bars" href="#menu">Menu</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Menu -->
+				<section id="menu">
+					<section>
+						<ul class="links">
+							<li><a href="about.html"><h3>About</h3><p>Who I am and what I do</p></a></li>
+							<li><a href="projects.html"><h3>Projects</h3><p>My data science work</p></a></li>
+							<li><a href="skills.html"><h3>Skills</h3><p>Tools and technologies</p></a></li>
+							<li><a href="contact.html"><h3>Contact</h3><p>Get in touch</p></a></li>
+						</ul>
+					</section>
+				</section>
+
+			<!-- Main -->
+				<div id="main">
+
+					<!-- Project 1 -->
+					<article class="post">
+						<header>
+							<div class="title">
+								<h2><a href="#">Alzheimer's Cognitive Decline Classification</a></h2>
+								<p>M.S. Capstone · Python · XGBoost · LightGBM · NACC Uniform Data Set</p>
+							</div>
+							<div class="meta">
+								<time class="published" datetime="2025-03-01">March 2025</time>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
+							</div>
+						</header>
+						<p>
+							Built a multi-class classification pipeline to predict cognitive decline stages (Normal, MCI, Dementia) using the NACC Uniform Data Set. Applied feature engineering, SMOTE for class imbalance, and ensemble methods including XGBoost and LightGBM. Performed dimensionality reduction via PCA and evaluated models using ROC-AUC, confusion matrices, and cross-validation. Delivered an end-to-end report with embedded visualizations tracking model performance across cognitive domains.
+						</p>
+						<footer>
+							<ul class="actions">
+								<li><a href="#" class="button large">View on GitHub</a></li>
 							</ul>
-						</nav>
-						<nav class="main">
-							<ul>
-								<li class="menu">
-									<a class="fa-bars" href="#menu">Menu</a>
-								</li>
+							<ul class="stats">
+								<li><a href="#">Machine Learning</a></li>
+								<li><a href="#">Healthcare</a></li>
+								<li><a href="#">Classification</a></li>
 							</ul>
-						</nav>
-					</header>
+						</footer>
+					</article>
 
-				<!-- Menu -->
-					<section id="menu">
+					<!-- Project 2 -->
+					<article class="post">
+						<header>
+							<div class="title">
+								<h2><a href="#">Cleantech ReAct Agentic AI System</a></h2>
+								<p>Python · LlamaIndex · GPT-4o-mini · RAG · ReAct Agents</p>
+							</div>
+							<div class="meta">
+								<time class="published" datetime="2024-11-01">November 2024</time>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
+							</div>
+						</header>
+						<p>
+							Built a multi-tool ReAct agent using LlamaIndex for specialized cleantech research, with a strict tool hierarchy: internal RAG, web search, reasoning engine, and safety guardrail. The RAG foundation used a HuggingFace BGE-Small embedding model with 3,072-token chunks to preserve technical context, augmented by an LLMRerank postprocessor that retrieves k=50 candidates then re-scores to the top 5 using GPT-4o-mini. Evaluated using LLM-as-Judge methodology across Faithfulness, Relevance, and Completeness metrics.
+						</p>
+						<footer>
+							<ul class="actions">
+								<li><a href="#" class="button large">View on GitHub</a></li>
+							</ul>
+							<ul class="stats">
+								<li><a href="#">Agentic AI</a></li>
+								<li><a href="#">LLM</a></li>
+								<li><a href="#">RAG</a></li>
+							</ul>
+						</footer>
+					</article>
 
-						<!-- Links -->
-							<section>
-								<ul class="links">
-									<li>
-										<a href="#intro">
-											<h3>About</h3>
-											<p>Who I am and what I do</p>
-										</a>
-									</li>
-									<li>
-										<a href="#main">
-											<h3>Projects</h3>
-											<p>My data science work</p>
-										</a>
-									</li>
-									<li>
-										<a href="#skills">
-											<h3>Skills</h3>
-											<p>Tools and technologies</p>
-										</a>
-									</li>
-									<li>
-										<a href="#footer">
-											<h3>Contact</h3>
-											<p>Get in touch</p>
-										</a>
-									</li>
-								</ul>
-							</section>
+					<!-- Project 3 -->
+					<article class="post">
+						<header>
+							<div class="title">
+								<h2><a href="#">Invoice Information Extraction: Transformer Comparison</a></h2>
+								<p>LayoutLMv3 · Donut · HuggingFace · Tesseract OCR</p>
+							</div>
+							<div class="meta">
+								<time class="published" datetime="2024-09-01">September 2024</time>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
+							</div>
+						</header>
+						<p>
+							Benchmarked LayoutLMv3 and Donut transformers on a 10,000-invoice dataset across template-aware and template-agnostic settings. LayoutLMv3 was fine-tuned using Tesseract OCR preprocessing, normalized bounding boxes, and AdamW optimization, achieving perfect F1 in template-aware conditions. Donut, an OCR-free encoder-decoder, processed raw images directly into structured JSON output, showing superior robustness to unseen layouts. Evaluated across token-level precision, recall, F1, and Exact Match Accuracy, revealing key trade-offs between the two architectures.
+						</p>
+						<footer>
+							<ul class="actions">
+								<li><a href="#" class="button large">View on GitHub</a></li>
+							</ul>
+							<ul class="stats">
+								<li><a href="#">NLP</a></li>
+								<li><a href="#">Transformers</a></li>
+								<li><a href="#">Document AI</a></li>
+							</ul>
+						</footer>
+					</article>
 
-						<!-- Actions -->
-							<section>
-								<ul class="actions stacked">
-									<li><a href="#" class="button large fit">Resume</a></li>
-								</ul>
-							</section>
+					<!-- Project 4 -->
+					<article class="post">
+						<header>
+							<div class="title">
+								<h2><a href="#">FIFA Player Market Value Visualization</a></h2>
+								<p>R · ggplot2 · RMarkdown · Choropleth · Scatter Plots</p>
+							</div>
+							<div class="meta">
+								<time class="published" datetime="2024-06-01">June 2024</time>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
+							</div>
+						</header>
+						<p>
+							Developed an interactive data visualization suite exploring FIFA player market values using R and ggplot2. Built choropleth maps of global player distribution, polynomial-fit scatter plots of age vs. market value by position, and annotated line charts tracking top player valuations over time. Applied Gestalt design principles and loess smoothing to surface clear patterns across 18,000+ player records.
+						</p>
+						<footer>
+							<ul class="actions">
+								<li><a href="#" class="button large">View on GitHub</a></li>
+							</ul>
+							<ul class="stats">
+								<li><a href="#">Data Visualization</a></li>
+								<li><a href="#">R</a></li>
+								<li><a href="#">Sports Analytics</a></li>
+							</ul>
+						</footer>
+					</article>
 
+					<!-- Project 5 -->
+					<article class="post">
+						<header>
+							<div class="title">
+								<h2><a href="#">Refugee Asylum Data Analysis</a></h2>
+								<p>Python · Scikit-Learn · Random Forest · KMeans · UNHCR Data</p>
+							</div>
+							<div class="meta">
+								<time class="published" datetime="2024-03-01">March 2024</time>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
+							</div>
+						</header>
+						<p>
+							Analyzed 34,600 UNHCR records of country-to-country asylum cases to identify nations under high refugee pressure and uncover global displacement patterns. Engineered two key features — Total Displaced and Asylum Pressure — to capture both raw burden and relative strain on host communities. Random Forest achieved F1 greater than 0.80 on the high-pressure class. Applied KMeans, Hierarchical, and DBSCAN clustering (silhouette-validated at k=3) to reveal three distinct country profiles. Findings translated into concrete policy recommendations for humanitarian resource allocation.
+						</p>
+						<footer>
+							<ul class="actions">
+								<li><a href="#" class="button large">View on GitHub</a></li>
+							</ul>
+							<ul class="stats">
+								<li><a href="#">Machine Learning</a></li>
+								<li><a href="#">Clustering</a></li>
+								<li><a href="#">Policy Analytics</a></li>
+							</ul>
+						</footer>
+					</article>
+
+				</div>
+
+			<!-- Sidebar -->
+				<section id="sidebar">
+					<section id="intro">
+						<a href="index.html" class="logo"><img src="images/avatar.jpg" alt="Vaishnavi Tiwari" /></a>
+						<header>
+							<h2>Vaishnavi Tiwari</h2>
+							<p>M.S. Data Science · DePaul University, Chicago</p>
+						</header>
 					</section>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Project 1: Alzheimer's -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">Alzheimer's Cognitive Decline Classification</a></h2>
-										<p>M.S. Capstone · Python · XGBoost · LightGBM · NACC Uniform Data Set</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2025-03-01">March 2025</time>
-										<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
-									</div>
-								</header>
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="Alzheimer's Classification Project" /></a>
-								<p>
-									Built a multi-class classification pipeline to predict cognitive decline stages (Normal, MCI, Dementia) using the NACC Uniform Data Set. Applied feature engineering, SMOTE for class imbalance, and ensemble methods including XGBoost and LightGBM. Performed dimensionality reduction via PCA and evaluated models using ROC-AUC, confusion matrices, and cross-validation. Delivered an end-to-end report with embedded visualizations tracking model performance across cognitive domains.
-								</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="#" class="button large">View on GitHub</a></li>
-									</ul>
-									<ul class="stats">
-										<li><a href="#">Machine Learning</a></li>
-										<li><a href="#">NLP</a></li>
-										<li><a href="#">Healthcare</a></li>
-									</ul>
-								</footer>
-							</article>
-
-						<!-- Project 2: Cleantech -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">Cleantech ReAct Agentic AI System</a></h2>
-										<p>Python · LlamaIndex · GPT-4o-mini · RAG · ReAct Agents</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2024-11-01">November 2024</time>
-										<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
-									</div>
-								</header>
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="Cleantech AI System" /></a>
-								<p>
-									Built a multi-tool ReAct agent using LlamaIndex for specialized cleantech research, with a strict tool hierarchy: internal RAG → web search → reasoning engine → safety guardrail. The RAG foundation used a HuggingFace BGE-Small embedding model with 3,072-token chunks to preserve technical context, augmented by an LLMRerank postprocessor that retrieves k=50 candidates then re-scores to the top 5 using GPT-4o-mini. Custom tools included a live web search, a dedicated reasoning engine for complex synthesis, and an ethical safety guardrail for domain-constrained output. Evaluated using LLM-as-Judge methodology across Faithfulness, Relevance, and Completeness metrics.
-								</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="#" class="button large">View on GitHub</a></li>
-									</ul>
-									<ul class="stats">
-										<li><a href="#">Agentic AI</a></li>
-										<li><a href="#">LLM</a></li>
-										<li><a href="#">RAG</a></li>
-									</ul>
-								</footer>
-							</article>
-
-						<!-- Project 3: Invoice Extraction -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">Invoice Information Extraction: Transformer Comparison</a></h2>
-										<p>LayoutLMv3 · Donut · HuggingFace · Tesseract OCR</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2024-09-01">September 2024</time>
-										<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
-									</div>
-								</header>
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="Invoice Extraction Project" /></a>
-								<p>
-									Benchmarked LayoutLMv3 and Donut transformers on a 10,000-invoice dataset across template-aware and template-agnostic settings. LayoutLMv3 was fine-tuned using Tesseract OCR preprocessing, normalized bounding boxes, and AdamW optimization   achieving perfect F1 in template-aware conditions. Donut, an OCR-free encoder-decoder, processed raw images directly into structured JSON output, showing superior robustness to unseen layouts. Evaluated across token-level precision, recall, F1, and Exact Match Accuracy, revealing key trade-offs: LayoutLMv3 excels on familiar templates while Donut generalizes better to new invoice formats.
-								</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="#" class="button large">View on GitHub</a></li>
-									</ul>
-									<ul class="stats">
-										<li><a href="#">NLP</a></li>
-										<li><a href="#">Transformers</a></li>
-										<li><a href="#">Document AI</a></li>
-									</ul>
-								</footer>
-							</article>
-
-						<!-- Project 4: FIFA -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">FIFA Player Market Value Visualization</a></h2>
-										<p>R · ggplot2 · RMarkdown · Choropleth · Scatter Plots</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2024-06-01">June 2024</time>
-										<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
-									</div>
-								</header>
-								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="FIFA Visualization Project" /></a>
-								<p>
-									Developed an interactive data visualization suite exploring FIFA player market values using R and ggplot2. Built choropleth maps of global player distribution, polynomial-fit scatter plots of age vs. market value by position, and annotated line charts tracking top player valuations over time. Applied Gestalt design principles and loess smoothing to surface clear, actionable patterns across 18,000+ player records.
-								</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="#" class="button large">View on GitHub</a></li>
-									</ul>
-									<ul class="stats">
-										<li><a href="#">Data Visualization</a></li>
-										<li><a href="#">R</a></li>
-										<li><a href="#">Sports Analytics</a></li>
-									</ul>
-								</footer>
-							</article>
-
-						<!-- Project 5: Refugee Asylum -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">Refugee Asylum Data Analysis</a></h2>
-										<p>Python · Scikit-Learn · Random Forest · KMeans · UNHCR Data</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2024-03-01">March 2024</time>
-										<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avatar.jpg" alt="" /></a>
-									</div>
-								</header>
-								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="Refugee Asylum Analysis" /></a>
-								<p>
-									Analyzed 34,600 UNHCR records of country-to-country asylum cases to identify nations under high refugee pressure and uncover global displacement patterns. Engineered two key features   Total Displaced and Asylum Pressure   to capture both raw burden and relative strain on host communities. Trained and compared Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and Voting Ensemble classifiers, with Random Forest achieving F1 &gt; 0.80 on the high-pressure class. Applied KMeans, Hierarchical, and DBSCAN clustering (silhouette-validated at k=3) to reveal three distinct country profiles: high-capacity nations (USA, Germany), high-pressure low-capacity nations (Lebanon, Uganda), and transitional hubs. Findings translated into concrete policy recommendations for humanitarian resource allocation.
-								</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="#" class="button large">View on GitHub</a></li>
-									</ul>
-									<ul class="stats">
-										<li><a href="#">Machine Learning</a></li>
-										<li><a href="#">Clustering</a></li>
-										<li><a href="#">Policy Analytics</a></li>
-									</ul>
-								</footer>
-							</article>
-
-					</div>
-
-				<!-- Sidebar -->
-					<section id="sidebar">
-
-						<!-- Intro -->
-							<section id="intro">
-								<a href="#" class="logo"><img src="images/avatar.jpg" alt="Vaishnavi Tiwari" /></a>
-								<header>
-									<h2>Vaishnavi Tiwari</h2>
-									<p>M.S. Data Science · DePaul University, Chicago<br />
-									Targeting roles in Data Analysis, BI Development &amp; Data Architecture.</p>
-								</header>
-							</section>
-
-						<!-- About Blurb -->
-							<section class="blurb">
-								<h2>About Me</h2>
-								<p>
-									I'm a Data Science graduate student at DePaul University with a background in machine learning, NLP, BI, and marketing analytics. I enjoy turning messy, complex data into clear insights and building intelligent systems   from agentic AI pipelines to interactive dashboards. Previously, I worked as a Google Ads Account Strategist where I used data to drive ROI for North American clients.
-								</p>
-								<ul class="actions">
-									<li><a href="#" class="button">Download Resume</a></li>
-								</ul>
-							</section>
-
-						<!-- Skills -->
-							<section id="skills">
-								<h2>Technical Skills</h2>
-								<ul class="posts">
-									<li><article><header><h3>Languages</h3></header><p>Python, R, SQL, Bash</p></article></li>
-									<li><article><header><h3>ML / AI</h3></header><p>Scikit-Learn, XGBoost, LightGBM, TensorFlow, Transformers (LayoutLMv3, BERT, Donut), LlamaIndex, RAG, ReAct Agents</p></article></li>
-									<li><article><header><h3>BI & Visualization</h3></header><p>Tableau, Power BI, ggplot2, Plotly, Seaborn, Matplotlib, Excel</p></article></li>
-									<li><article><header><h3>Data Engineering</h3></header><p>ETL Pipelines, MySQL, PostgreSQL, MongoDB, Apache Spark, REST APIs</p></article></li>
-									<li><article><header><h3>Cloud & Tools</h3></header><p>AWS (S3, SageMaker), Google BigQuery, Docker, Git, GitHub, Jupyter</p></article></li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<section id="footer">
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/vaishnavi-tiwari-1a18971ab" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/tiwari-vaish" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-									<li><a href="/cdn-cgi/l/email-protection#81f7e0e8f2e9aff5e8f6e0f3e8b1b2c1e6ece0e8edafe2eeec" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-									<li><a href="#" class="icon solid fa-file-pdf"><span class="label">Resume</span></a></li>
-								</ul>
-								<p class="copyright">&copy; Vaishnavi Tiwari 2025. Template: <a href="http://html5up.net">HTML5 UP</a>.</p>
-							</section>
-
+					<section class="blurb">
+						<h2>About Me</h2>
+						<p>Data Science graduate student specializing in ML, NLP, and BI. Targeting roles in Data Analysis, BI Development, and Data Architecture.</p>
+						<ul class="actions">
+							<li><a href="about.html" class="button">Learn More</a></li>
+						</ul>
 					</section>
 
-			</div>
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/vaishnavi-tiwari-1a18971ab" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/tiwari-vaish" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+							<li><a href="mailto:vaish.tiwari03@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Vaishnavi Tiwari 2025. Template: <a href="http://html5up.net">HTML5 UP</a>.</p>
+					</section>
+				</section>
 
-		<!-- Scripts -->
-			<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<scrip
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
