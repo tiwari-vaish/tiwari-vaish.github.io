@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Vaishnavi Tiwari | Data Science Portfolio</title>
@@ -13,85 +8,33 @@
 		<style>
 			.section { display: none; }
 			.section.active { display: block; }
-
-			/* Pastel colour accents */
-			:root {
-				--pastel-sage:    #b7d7c2;
-				--name-color:     #1a1a1a;
-				--pastel-blush:   #f2c4c4;
-				--pastel-sky:     #b8d8e8;
-				--pastel-lavender:#d6ccf0;
-				--pastel-peach:   #f7d9b5;
-			}
-
-			/* Header name */
-			#header h1 a {
-				color: #1a1a1a !important;
-			}
-
-			/* Nav links hover */
-			#header nav.links a:hover {
-				color: var(--pastel-sage) !important;
-			}
-
-			/* Article post borders — soft left accent */
-			article.post {
-				border-left: 3px solid var(--pastel-sky);
-				padding-left: 1.2em;
-			}
-
-			/* Alternate project cards with different pastel accents */
-			#section-projects article.post:nth-child(1) { border-left-color: var(--pastel-sage); }
-			#section-projects article.post:nth-child(2) { border-left-color: var(--pastel-sky); }
-			#section-projects article.post:nth-child(3) { border-left-color: var(--pastel-lavender); }
-			#section-projects article.post:nth-child(4) { border-left-color: var(--pastel-peach); }
-			#section-projects article.post:nth-child(5) { border-left-color: var(--pastel-blush); }
-
-			/* Skills cards */
-			#section-skills article.post:nth-child(odd)  { border-left-color: var(--pastel-sage); }
-			#section-skills article.post:nth-child(even) { border-left-color: var(--pastel-sky); }
-
-			/* Sidebar intro name */
-			#sidebar #intro header h2 {
-				color: #1a1a1a !important;
-			}
-
-			/* Section h2 titles */
-			#section-about article.post header .title h2,
-			#section-skills article.post header .title h2 {
-				color: var(--pastel-sky) !important;
-			}
-
-			/* Button accent */
-			.button:hover {
-				background-color: var(--pastel-sage) !important;
-				border-color: var(--pastel-sage) !important;
-				color: #2d2d2d !important;
-			}
-
-			/* Stats tags */
-			ul.stats li a {
-				background: var(--pastel-lavender) !important;
-				color: #3a3a4a !important;
-				border-radius: 3px;
-				padding: 2px 8px;
-				font-size: 0.85em;
-			}
+			#header h1 a { color: #5a8c6e !important; }
+			#header nav.links a:hover { color: #5a8c6e !important; }
+			#sidebar #intro header h2 { color: #5a8c6e !important; }
+			article.post { border-left: 3px solid #b8d8e8; padding-left: 1.2em; }
+			#section-projects article.post:nth-child(1) { border-left-color: #b7d7c2; }
+			#section-projects article.post:nth-child(2) { border-left-color: #b8d8e8; }
+			#section-projects article.post:nth-child(3) { border-left-color: #d6ccf0; }
+			#section-projects article.post:nth-child(4) { border-left-color: #f7d9b5; }
+			#section-projects article.post:nth-child(5) { border-left-color: #f2c4c4; }
+			#section-skills article.post:nth-child(odd)  { border-left-color: #b7d7c2; }
+			#section-skills article.post:nth-child(even) { border-left-color: #b8d8e8; }
+			.button:hover { background-color: #5a8c6e !important; border-color: #5a8c6e !important; color: #fff !important; }
+			ul.stats li a { background: #d6ccf0 !important; color: #3a3a4a !important; border-radius: 3px; padding: 2px 8px; font-size: 0.85em; }
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<div id="wrapper">
 
-			<!-- Header -->
 			<header id="header">
-				<h1><a href="#" onclick="showSection('home'); return false;">Vaishnavi Tiwari</a></h1>
+				<h1><a href="javascript:void(0)" data-section="home">Vaishnavi Tiwari</a></h1>
 				<nav class="links">
 					<ul>
-						<li><a href="#" onclick="showSection('about'); return false;">About</a></li>
-						<li><a href="#" onclick="showSection('projects'); return false;">Projects</a></li>
-						<li><a href="#" onclick="showSection('skills'); return false;">Skills</a></li>
-						<li><a href="#" onclick="showSection('contact'); return false;">Contact</a></li>
+						<li><a href="javascript:void(0)" data-section="about">About</a></li>
+						<li><a href="javascript:void(0)" data-section="projects">Projects</a></li>
+						<li><a href="javascript:void(0)" data-section="skills">Skills</a></li>
+						<li><a href="javascript:void(0)" data-section="contact">Contact</a></li>
 					</ul>
 				</nav>
 				<nav class="main">
@@ -103,14 +46,13 @@
 				</nav>
 			</header>
 
-			<!-- Menu -->
 			<section id="menu">
 				<section>
 					<ul class="links">
-						<li><a href="#" onclick="showSection('about'); return false;"><h3>About</h3><p>Who I am and what I do</p></a></li>
-						<li><a href="#" onclick="showSection('projects'); return false;"><h3>Projects</h3><p>My data science work</p></a></li>
-						<li><a href="#" onclick="showSection('skills'); return false;"><h3>Skills</h3><p>Tools and technologies</p></a></li>
-						<li><a href="#" onclick="showSection('contact'); return false;"><h3>Contact</h3><p>Get in touch</p></a></li>
+						<li><a href="javascript:void(0)" data-section="about"><h3>About</h3><p>Who I am and what I do</p></a></li>
+						<li><a href="javascript:void(0)" data-section="projects"><h3>Projects</h3><p>My data science work</p></a></li>
+						<li><a href="javascript:void(0)" data-section="skills"><h3>Skills</h3><p>Tools and technologies</p></a></li>
+						<li><a href="javascript:void(0)" data-section="contact"><h3>Contact</h3><p>Get in touch</p></a></li>
 					</ul>
 				</section>
 				<section>
@@ -120,7 +62,6 @@
 				</section>
 			</section>
 
-			<!-- Main -->
 			<div id="main">
 
 				<!-- HOME -->
@@ -129,19 +70,15 @@
 						<header>
 							<div class="title">
 								<h2>Hi, I'm Vaishnavi Tiwari</h2>
-								<p>Data Science Graduate Student · DePaul University, Chicago</p>
+								<p>Data Science Graduate · DePaul University, Chicago</p>
 							</div>
 						</header>
-						<p>
-							I'm a Data Science graduate student with hands-on experience building end-to-end ML pipelines, NLP systems, and agentic AI applications. My work spans the full data science lifecycle from raw data wrangling and feature engineering to model training, evaluation, and communicating results to stakeholders.
-						</p>
-						<p>
-							I'm particularly interested in how machine learning can be applied to real-world problems in healthcare, finance, and policy. Whether it's classifying Alzheimer's progression from clinical data, extracting structured information from documents using transformers, or building a ReAct agent that reasons over live and historical data. I care about building things that actually work and are interpretable.
-						</p>
+						<p>I'm a Data Science graduate with hands-on experience building end-to-end ML pipelines, NLP systems, and agentic AI applications. My work spans the full data science lifecycle from raw data wrangling and feature engineering to model training, evaluation, and communicating results to stakeholders.</p>
+						<p>I'm particularly interested in how machine learning can be applied to real-world problems in healthcare, finance, and policy. Whether it's classifying Alzheimer's progression from clinical data, extracting structured information from documents using transformers, or building a ReAct agent that reasons over live and historical data. I care about building things that actually work and are interpretable.</p>
 						<footer>
 							<ul class="actions">
-								<li><a href="#" class="button large" onclick="showSection('projects'); return false;">View My Projects</a></li>
-								<li><a href="#" class="button large" onclick="showSection('about'); return false;">About Me</a></li>
+								<li><a href="javascript:void(0)" class="button large" data-section="projects">View My Projects</a></li>
+								<li><a href="javascript:void(0)" class="button large" data-section="about">About Me</a></li>
 							</ul>
 						</footer>
 					</article>
@@ -150,33 +87,18 @@
 				<!-- ABOUT -->
 				<div id="section-about" class="section">
 					<article class="post">
-						<header>
-							<div class="title">
-								<h2>About Me</h2>
-								<p>Data Scientist · Chicago, IL</p>
-							</div>
-						</header>
-						<p>
-							I'm a Data Science graduate student at DePaul University with a background in machine learning, NLP, and business intelligence. I'm drawn to problems where data is messy, the stakes are real, and the solution requires more than plugging in a model, things like clinical prediction, document understanding, and agentic AI systems that reason over multiple sources.
-						</p>
-						<p>
-							Before grad school, I worked as a Google Ads Account Strategist at Regalix, where I used analytics and A/B testing to optimize campaigns and drive a 15% ROI increase for North American small and mid-sized businesses. That experience gave me a strong foundation in translating data into business decisions, which I now apply in a more technical context.
-						</p>
-						<p>
-							Outside of coursework and projects, I practice SQL regularly on platforms like DataLemur, with a focus on window functions and query optimization. I believe clean, efficient queries are just as important as a well-tuned model.
-						</p>
+						<header><div class="title"><h2>About Me</h2><p>Data Scientist · Chicago, IL</p></div></header>
+						<p>I'm a Data Science graduate from DePaul University with a background in machine learning, NLP, and business intelligence. I'm drawn to problems where data is messy, the stakes are real, and the solution requires more than plugging in a model, things like clinical prediction, document understanding, and agentic AI systems that reason over multiple sources.</p>
+						<p>Before grad school, I worked as a Google Ads Account Strategist at Regalix, where I used analytics and A/B testing to optimize campaigns and drive a 15% ROI increase for North American small and mid-sized businesses. That experience gave me a strong foundation in translating data into business decisions, which I now apply in a more technical context.</p>
+						<p>Outside of coursework and projects, I practice SQL regularly on platforms like DataLemur, with a focus on window functions and query optimization. I believe clean, efficient queries are just as important as a well-tuned model.</p>
 					</article>
 
 					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Education</h2>
-							</div>
-						</header>
+						<header><div class="title"><h2>Education</h2></div></header>
 						<p>
 							<strong>M.S. Data Science</strong><br />
 							DePaul University, Jarvis College of Computing and Digital Media · Chicago, IL<br />
-							Expected June 2026<br />
+							Graduated 2026<br />
 							Coursework: Machine Learning, Advanced Data Analysis, Regression, NLP, Python, Data Visualization
 						</p>
 						<p>
@@ -187,11 +109,7 @@
 					</article>
 
 					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Work Experience</h2>
-							</div>
-						</header>
+						<header><div class="title"><h2>Work Experience</h2></div></header>
 						<p>
 							<strong>Google Ads Account Strategist</strong><br />
 							Regalix, A MarketStar Company · Hyderabad, India · Nov 2022 – Feb 2024<br /><br />
@@ -205,11 +123,7 @@
 					</article>
 
 					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Certifications</h2>
-							</div>
-						</header>
+						<header><div class="title"><h2>Certifications</h2></div></header>
 						<p>Cybersecurity Fundamentals · Python and R Programming · Digital Marketing (Google) · Power BI and Excel Data Analysis</p>
 						<footer>
 							<ul class="actions">
@@ -233,9 +147,7 @@
 								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
-						<p>
-							Built a multi-class classification pipeline to predict cognitive decline stages (Normal, MCI, Dementia) using the NACC Uniform Data Set. Applied feature engineering, SMOTE for class imbalance, and ensemble methods including XGBoost and LightGBM. Performed dimensionality reduction via PCA and evaluated models using ROC-AUC, confusion matrices, and cross-validation. Delivered an end-to-end report with embedded visualizations tracking model performance across cognitive domains.
-						</p>
+						<p>Built a multi-class classification pipeline to predict cognitive decline stages (Normal, MCI, Dementia) using the NACC Uniform Data Set. Applied feature engineering, SMOTE for class imbalance, and ensemble methods including XGBoost and LightGBM. Performed dimensionality reduction via PCA and evaluated models using ROC-AUC, confusion matrices, and cross-validation.</p>
 						<footer>
 							<ul class="actions">
 								<li><a href="https://github.com/tiwari-vaish/alzheimers-cognitive-classification" class="button large" target="_blank">View on GitHub</a></li>
@@ -259,9 +171,7 @@
 								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
-						<p>
-							Built a multi-tool ReAct agent using LlamaIndex for specialized cleantech research, with a strict tool hierarchy: internal RAG, web search, reasoning engine, and ethical safety guardrail. The RAG foundation used a HuggingFace BGE-Small embedding model with 3,072-token chunks to preserve technical context, augmented by an LLMRerank postprocessor that retrieves k=50 candidates then re-scores to the top 5 using GPT-4o-mini. Evaluated using LLM-as-Judge methodology across Faithfulness, Relevance, and Completeness metrics.
-						</p>
+						<p>Built a multi-tool ReAct agent using LlamaIndex for specialized cleantech research, with a strict tool hierarchy: internal RAG, web search, reasoning engine, and ethical safety guardrail. The RAG foundation used a HuggingFace BGE-Small embedding model with 3,072-token chunks, augmented by an LLMRerank postprocessor that retrieves k=50 candidates then re-scores to the top 5 using GPT-4o-mini.</p>
 						<footer>
 							<ul class="actions">
 								<li><a href="https://github.com/tiwari-vaish/cleantech_react_agent" class="button large" target="_blank">View on GitHub</a></li>
@@ -285,9 +195,7 @@
 								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
-						<p>
-							Benchmarked LayoutLMv3 and Donut transformers on a 10,000-invoice dataset across template-aware and template-agnostic settings. LayoutLMv3 was fine-tuned using Tesseract OCR preprocessing, normalized bounding boxes, and AdamW optimization, achieving perfect F1 in template-aware conditions. Donut processed raw images directly into structured JSON without OCR, showing stronger robustness to unseen layouts. Evaluated across token-level precision, recall, F1, and Exact Match Accuracy.
-						</p>
+						<p>Benchmarked LayoutLMv3 and Donut transformers on a 10,000-invoice dataset across template-aware and template-agnostic settings. LayoutLMv3 achieved perfect F1 in template-aware conditions. Donut processed raw images directly into structured JSON without OCR, showing stronger robustness to unseen layouts. Evaluated across token-level precision, recall, F1, and Exact Match Accuracy.</p>
 						<footer>
 							<ul class="actions">
 								<li><a href="https://github.com/tiwari-vaish/Invoice-Extraction" class="button large" target="_blank">View on GitHub</a></li>
@@ -311,9 +219,7 @@
 								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
-						<p>
-							Developed a data visualization suite exploring FIFA player market values using R and ggplot2. Built choropleth maps of global player distribution, polynomial-fit scatter plots of age vs. market value by position, and annotated line charts tracking top player valuations over time. Applied Gestalt design principles and loess smoothing to surface clear patterns across 18,000+ player records.
-						</p>
+						<p>Developed a data visualization suite exploring FIFA player market values using R and ggplot2. Built choropleth maps of global player distribution, polynomial-fit scatter plots of age vs. market value by position, and annotated line charts tracking top player valuations over time. Applied Gestalt design principles and loess smoothing across 18,000+ player records.</p>
 						<footer>
 							<ul class="actions">
 								<li><a href="https://github.com/tiwari-vaish/FIFA-GroupProject" class="button large" target="_blank">View on GitHub</a></li>
@@ -337,9 +243,7 @@
 								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
-						<p>
-							Analyzed 34,600 UNHCR records to identify nations under high refugee pressure and uncover global displacement patterns. Engineered two key features, Total Displaced and Asylum Pressure, to capture raw burden and relative strain on host communities. Random Forest achieved F1 greater than 0.80 on the high-pressure class. Applied KMeans, Hierarchical, and DBSCAN clustering (silhouette-validated at k=3) to reveal three distinct country profiles. Findings translated into concrete policy recommendations for humanitarian resource allocation.
-						</p>
+						<p>Analyzed 34,600 UNHCR records to identify nations under high refugee pressure and uncover global displacement patterns. Engineered Total Displaced and Asylum Pressure features to capture raw burden and relative strain. Random Forest achieved F1 greater than 0.80. Applied KMeans, Hierarchical, and DBSCAN clustering (silhouette-validated at k=3) to reveal three distinct country profiles with policy recommendations.</p>
 						<footer>
 							<ul class="actions">
 								<li><a href="https://github.com/tiwari-vaish/refugee_asylum_analysis" class="button large" target="_blank">View on GitHub</a></li>
@@ -356,37 +260,30 @@
 
 				<!-- SKILLS -->
 				<div id="section-skills" class="section">
-
 					<article class="post">
 						<header><div class="title"><h2>Languages</h2></div></header>
 						<p>Python (Pandas, NumPy, Scikit-Learn, TensorFlow, Keras, XGBoost, LightGBM, Matplotlib, Seaborn, Plotly), R (tidyverse, ggplot2, caret), SQL, Bash</p>
 					</article>
-
 					<article class="post">
 						<header><div class="title"><h2>Machine Learning and AI</h2></div></header>
 						<p>Supervised and Unsupervised Learning, Regression, Classification, Clustering, Ensemble Methods, ARIMA, NLP, Transformers (LayoutLMv3, Donut, BERT), RAG, ReAct Agents, LlamaIndex, HuggingFace, Prompt Engineering</p>
 					</article>
-
 					<article class="post">
 						<header><div class="title"><h2>BI and Visualization</h2></div></header>
 						<p>Tableau, Power BI (DAX, Power Query), Excel (Pivot Tables, VLOOKUP, Macros), Matplotlib, Seaborn, Plotly, ggplot2</p>
 					</article>
-
 					<article class="post">
 						<header><div class="title"><h2>Data Engineering</h2></div></header>
 						<p>ETL Pipelines, Data Wrangling, Feature Engineering, Data Cleaning, MySQL, PostgreSQL, MongoDB, Apache Spark, REST APIs</p>
 					</article>
-
 					<article class="post">
 						<header><div class="title"><h2>Cloud and Tools</h2></div></header>
 						<p>AWS (S3, SageMaker), Google BigQuery, Google Analytics, Google Ads Manager, Git, GitHub, Docker, Jupyter, Google Colab</p>
 					</article>
-
 					<article class="post">
 						<header><div class="title"><h2>Statistics</h2></div></header>
 						<p>Hypothesis Testing, Bayesian Inference, PCA, Dimensionality Reduction, Multivariate Analysis, A/B Testing, Cross-Validation, Confusion Matrix, ROC-AUC</p>
 					</article>
-
 				</div>
 
 				<!-- CONTACT -->
@@ -398,25 +295,18 @@
 								<p>Open to full-time Data Science opportunities</p>
 							</div>
 						</header>
-						<p>
-							I'm currently completing my M.S. in Data Science at DePaul University (expected June 2026) and actively looking for full-time roles. Feel free to reach out via any of the channels below.
-						</p>
-
+						<p>I'm a recent M.S. Data Science graduate from DePaul University actively looking for full-time roles. Feel free to reach out via any of the channels below.</p>
 						<h3>Email</h3>
-						<p><a href="/cdn-cgi/l/email-protection#4234232b312a6c362b3523302b727102252f232b2e6c212d2f"><span class="__cf_email__" data-cfemail="3a4c5b534952144e534d5b48530a097a5d575b535614595557">[email&#160;protected]</span></a></p>
-
+						<p><a href="mailto:vaish.tiwari03@gmail.com">vaish.tiwari03@gmail.com</a></p>
 						<h3>LinkedIn</h3>
 						<p><a href="https://www.linkedin.com/in/vaishnavi-tiwari-1a18971ab" target="_blank">linkedin.com/in/vaishnavi-tiwari</a></p>
-
 						<h3>GitHub</h3>
 						<p><a href="https://github.com/tiwari-vaish" target="_blank">github.com/tiwari-vaish</a></p>
-
 						<h3>Location</h3>
 						<p>Chicago, IL (Open to remote and hybrid roles)</p>
-
 						<footer>
 							<ul class="actions">
-								<li><a href="/cdn-cgi/l/email-protection#4d3b2c243e256339243a2c3f247d7e0d2a202c2421632e2220" class="button large">Email Me</a></li>
+								<li><a href="mailto:vaish.tiwari03@gmail.com" class="button large">Email Me</a></li>
 								<li><a href="#" class="button large">Download Resume</a></li>
 							</ul>
 						</footer>
@@ -437,9 +327,9 @@
 				<section class="blurb">
 					<h2>Quick Links</h2>
 					<ul class="actions stacked">
-						<li><a href="#" class="button fit" onclick="showSection('projects'); return false;">Projects</a></li>
-						<li><a href="#" class="button fit" onclick="showSection('skills'); return false;">Skills</a></li>
-						<li><a href="#" class="button fit" onclick="showSection('contact'); return false;">Contact</a></li>
+						<li><a href="javascript:void(0)" class="button fit" data-section="projects">Projects</a></li>
+						<li><a href="javascript:void(0)" class="button fit" data-section="skills">Skills</a></li>
+						<li><a href="javascript:void(0)" class="button fit" data-section="contact">Contact</a></li>
 						<li><a href="#" class="button fit">Resume</a></li>
 					</ul>
 				</section>
@@ -448,7 +338,7 @@
 					<ul class="icons">
 						<li><a href="https://www.linkedin.com/in/vaishnavi-tiwari-1a18971ab" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://github.com/tiwari-vaish" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-						<li><a href="/cdn-cgi/l/email-protection#ccbaada5bfa4e2b8a5bbadbea5fcff8caba1ada5a0e2afa3a1" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="mailto:vaish.tiwari03@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<p class="copyright">&copy; Vaishnavi Tiwari 2025. Template: <a href="http://html5up.net">HTML5 UP</a>.</p>
 				</section>
@@ -456,8 +346,30 @@
 
 		</div>
 
-		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js">
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			function showSection(name) {
+				document.querySelectorAll('.section').forEach(function(el) {
+					el.classList.remove('active');
+				});
+				var target = document.getElementById('section-' + name);
+				if (target) { target.classList.add('active'); }
+				window.scrollTo(0, 0);
+			}
+
+			$(window).on('load', function() {
+				$(document).on('click', '[data-section]', function(e) {
+					e.preventDefault();
+					e.stopImmediatePropagation();
+					showSection($(this).data('section'));
+				});
+			});
+		</script>
+
+	</body>
+</html>
