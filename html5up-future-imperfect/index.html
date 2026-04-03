@@ -13,6 +13,69 @@
 		<style>
 			.section { display: none; }
 			.section.active { display: block; }
+
+			/* Pastel colour accents */
+			:root {
+				--pastel-sage:    #b7d7c2;
+				--pastel-blush:   #f2c4c4;
+				--pastel-sky:     #b8d8e8;
+				--pastel-lavender:#d6ccf0;
+				--pastel-peach:   #f7d9b5;
+			}
+
+			/* Header name */
+			#header h1 a {
+				color: var(--pastel-sage) !important;
+			}
+
+			/* Nav links hover */
+			#header nav.links a:hover {
+				color: var(--pastel-sage) !important;
+			}
+
+			/* Article post borders — soft left accent */
+			article.post {
+				border-left: 3px solid var(--pastel-sky);
+				padding-left: 1.2em;
+			}
+
+			/* Alternate project cards with different pastel accents */
+			#section-projects article.post:nth-child(1) { border-left-color: var(--pastel-sage); }
+			#section-projects article.post:nth-child(2) { border-left-color: var(--pastel-sky); }
+			#section-projects article.post:nth-child(3) { border-left-color: var(--pastel-lavender); }
+			#section-projects article.post:nth-child(4) { border-left-color: var(--pastel-peach); }
+			#section-projects article.post:nth-child(5) { border-left-color: var(--pastel-blush); }
+
+			/* Skills cards */
+			#section-skills article.post:nth-child(odd)  { border-left-color: var(--pastel-sage); }
+			#section-skills article.post:nth-child(even) { border-left-color: var(--pastel-sky); }
+
+			/* Sidebar intro name */
+			#sidebar #intro header h2 {
+				color: var(--pastel-sage) !important;
+			}
+
+			/* Section h2 titles */
+			#section-about article.post header .title h2,
+			#section-skills article.post header .title h2 {
+				color: var(--pastel-sky) !important;
+			}
+
+			/* Button accent */
+			.button:hover {
+				background-color: var(--pastel-sage) !important;
+				border-color: var(--pastel-sage) !important;
+				color: #2d2d2d !important;
+			}
+
+			/* Stats tags */
+			ul.stats li a {
+				background: var(--pastel-lavender) !important;
+				color: #3a3a4a !important;
+				border-radius: 3px;
+				padding: 2px 8px;
+				font-size: 0.85em;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -166,7 +229,7 @@
 							</div>
 							<div class="meta">
 								<time class="published" datetime="2025-03-01">March 2025</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avvatar.png" alt="" /></a>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
 						<p>
@@ -174,7 +237,7 @@
 						</p>
 						<footer>
 							<ul class="actions">
-								<li><a href="#" class="button large">View on GitHub</a></li>
+								<li><a href="https://github.com/tiwari-vaish/alzheimers-cognitive-classification" class="button large" target="_blank">View on GitHub</a></li>
 							</ul>
 							<ul class="stats">
 								<li><a href="#">Machine Learning</a></li>
@@ -192,7 +255,7 @@
 							</div>
 							<div class="meta">
 								<time class="published" datetime="2024-11-01">November 2024</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avvatar.png" alt="" /></a>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
 						<p>
@@ -200,7 +263,7 @@
 						</p>
 						<footer>
 							<ul class="actions">
-								<li><a href="#" class="button large">View on GitHub</a></li>
+								<li><a href="https://github.com/tiwari-vaish/cleantech_react_agent" class="button large" target="_blank">View on GitHub</a></li>
 							</ul>
 							<ul class="stats">
 								<li><a href="#">Agentic AI</a></li>
@@ -218,7 +281,7 @@
 							</div>
 							<div class="meta">
 								<time class="published" datetime="2024-09-01">September 2024</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avvatar.png" alt="" /></a>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
 						<p>
@@ -226,7 +289,7 @@
 						</p>
 						<footer>
 							<ul class="actions">
-								<li><a href="#" class="button large">View on GitHub</a></li>
+								<li><a href="https://github.com/tiwari-vaish/Invoice-Extraction" class="button large" target="_blank">View on GitHub</a></li>
 							</ul>
 							<ul class="stats">
 								<li><a href="#">NLP</a></li>
@@ -244,7 +307,7 @@
 							</div>
 							<div class="meta">
 								<time class="published" datetime="2024-06-01">June 2024</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avvatar.png" alt="" /></a>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
 						<p>
@@ -252,7 +315,7 @@
 						</p>
 						<footer>
 							<ul class="actions">
-								<li><a href="#" class="button large">View on GitHub</a></li>
+								<li><a href="https://github.com/tiwari-vaish/FIFA-GroupProject" class="button large" target="_blank">View on GitHub</a></li>
 							</ul>
 							<ul class="stats">
 								<li><a href="#">Data Visualization</a></li>
@@ -270,7 +333,7 @@
 							</div>
 							<div class="meta">
 								<time class="published" datetime="2024-03-01">March 2024</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span><img src="images/avvatar.png" alt="" /></a>
+								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
 							</div>
 						</header>
 						<p>
@@ -278,7 +341,7 @@
 						</p>
 						<footer>
 							<ul class="actions">
-								<li><a href="#" class="button large">View on GitHub</a></li>
+								<li><a href="https://github.com/tiwari-vaish/refugee_asylum_analysis" class="button large" target="_blank">View on GitHub</a></li>
 							</ul>
 							<ul class="stats">
 								<li><a href="#">Machine Learning</a></li>
@@ -364,7 +427,6 @@
 			<!-- Sidebar -->
 			<section id="sidebar">
 				<section id="intro">
-					<a href="#" onclick="showSection('home'); return false;" class="logo"><img src="images/avvatar.png" alt="Vaishnavi Tiwari" /></a>
 					<header>
 						<h2>Vaishnavi Tiwari</h2>
 						<p>M.S. Data Science · DePaul University, Chicago</p>
