@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaishnavi Tiwari | Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #FAF7F4;
+      --bg2: #F2EDE8;
+      --surface: #FFFFFF;
+      --accent: #8B6B5E;
+      --accent2: #C3ADA5;
+      --accent3: #5C3D2E;
+      --text: #1E1410;
+      --text2: #6B5147;
+      --text3: #A08070;
+      --border: rgba(139,107,94,0.15);
+      --shadow: rgba(92,61,46,0.08);
+      --tag-bg: rgba(195,173,165,0.2);
+      --tag-border: rgba(139,107,94,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,247,244,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px; color: var(--accent3);
+      text-decoration: none; letter-spacing: 0.3px;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-size: 14px; font-weight: 500; color: var(--text2);
+      text-decoration: none; letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent3); }
+    .nav-cta {
+      background: var(--accent3); color: white !important;
+      padding: 8px 20px; border-radius: 6px;
+      font-size: 13px !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent) !important; color: white !important; }
+
+    /* SECTIONS */
+    section { padding: 100px 10%; }
+    section:nth-child(even) { background: var(--bg2); }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--accent);
+      letter-spacing: 3px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--accent3); line-height: 1.15;
+      margin-bottom: 48px;
+    }
+
+    /* HERO */
+    #home {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding-top: 64px;
+      background: var(--bg);
+    }
+    .hero-inner {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 60px;
+      width: 100%;
+    }
+    .hero-text { flex: 1; }
+    .hero-greeting {
+      font-family: 'DM Mono', monospace;
+      font-size: 14px; color: var(--accent);
+      letter-spacing: 2px; margin-bottom: 16px;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.1s;
+    }
+    .hero-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(42px, 6vw, 80px);
+      color: var(--accent3); line-height: 1.05;
+      margin-bottom: 16px;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.2s;
+    }
+    .hero-role {
+      font-size: 20px; color: var(--text2); font-weight: 300;
+      margin-bottom: 24px; min-height: 32px;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.3s;
+    }
+    .cursor { display: inline-block; width: 2px; height: 22px; background: var(--accent); animation: blink 1s infinite; vertical-align: middle; margin-left: 2px; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .hero-bio {
+      font-size: 16px; color: var(--text2); max-width: 540px; line-height: 1.8;
+      margin-bottom: 36px;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.4s;
+    }
+    .hero-btns {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.5s;
+    }
+    .btn-primary {
+      background: var(--accent3); color: white;
+      padding: 14px 32px; border-radius: 8px;
+      font-size: 15px; font-weight: 500;
+      text-decoration: none; transition: background 0.2s, transform 0.1s;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+    .btn-secondary {
+      border: 1.5px solid var(--accent2); color: var(--accent3);
+      padding: 13px 32px; border-radius: 8px;
+      font-size: 15px; font-weight: 500;
+      text-decoration: none; transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { background: var(--tag-bg); }
+    .hero-img {
+      width: 320px; height: 320px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--bg2);
+      border: 4px solid var(--accent2);
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.3s;
+    }
+    .hero-initials {
+      font-family: 'DM Serif Display', serif;
+      font-size: 80px; color: var(--accent2);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .about-text p { color: var(--text2); font-size: 16px; line-height: 1.9; margin-bottom: 16px; }
+    .edu-cards { display: flex; flex-direction: column; gap: 20px; }
+    .edu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      transition: box-shadow 0.2s;
+    }
+    .edu-card:hover { box-shadow: 0 4px 20px var(--shadow); }
+    .edu-school {
+      font-family: 'DM Serif Display', serif;
+      font-size: 17px; color: var(--accent3); margin-bottom: 4px;
+    }
+    .edu-degree { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+    .edu-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--text3); letter-spacing: 1px;
+    }
+    .edu-gpa {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--accent);
+    }
+
+    /* SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+    .skill-group h3 {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--accent);
+      letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 16px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 13px; color: var(--text2);
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .skill-tag:hover { background: var(--accent2); border-color: var(--accent); color: var(--accent3); }
+
+    /* EXPERIENCE */
+    .exp-list { display: flex; flex-direction: column; gap: 32px; }
+    .exp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 36px;
+      transition: box-shadow 0.2s;
+    }
+    .exp-card:hover { box-shadow: 0 4px 24px var(--shadow); }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 6px; }
+    .exp-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px; color: var(--accent3);
+    }
+    .exp-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--text3);
+      letter-spacing: 1px; padding-top: 4px;
+    }
+    .exp-company { font-size: 14px; color: var(--accent); font-weight: 500; margin-bottom: 16px; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .exp-bullets li {
+      font-size: 15px; color: var(--text2); line-height: 1.7;
+      padding-left: 20px; position: relative;
+    }
+    .exp-bullets li::before {
+      content: ''; position: absolute; left: 0; top: 11px;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent2);
+    }
+
+    /* PROJECTS */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
+    .proj-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+      display: flex; flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .proj-card:hover { box-shadow: 0 8px 32px var(--shadow); transform: translateY(-3px); }
+    .proj-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px; color: var(--accent3);
+      margin-bottom: 12px; line-height: 1.3;
+    }
+    .proj-desc { font-size: 14px; color: var(--text2); line-height: 1.75; flex: 1; margin-bottom: 20px; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+    .proj-tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--accent);
+    }
+    .proj-links { display: flex; gap: 12px; }
+    .proj-link {
+      font-size: 13px; font-weight: 500; color: var(--accent3);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 7px 16px; border-radius: 6px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .proj-link:hover { background: var(--tag-bg); border-color: var(--accent2); }
+
+    /* CONTACT */
+    #contact { text-align: center; }
+    .contact-desc { font-size: 17px; color: var(--text2); max-width: 520px; margin: 0 auto 48px; line-height: 1.8; }
+    .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .contact-link {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 28px;
+      font-size: 15px; color: var(--text2); font-weight: 500;
+      text-decoration: none;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .contact-link:hover { box-shadow: 0 4px 16px var(--shadow); border-color: var(--accent2); color: var(--accent3); }
+    .contact-icon { font-size: 20px; }
+
+    /* FOOTER */
+    footer {
+      text-align: center; padding: 32px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px; color: var(--text3);
+      border-top: 1px solid var(--border);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 0 5%; }
+      .nav-links { display: none; }
+      section { padding: 80px 6%; }
+      .hero-inner { flex-direction: column-reverse; text-align: center; }
+      .hero-btns { justify-content: center; }
+      .hero-img { width: 200px; height: 200px; }
+      .hero-initials { font-size: 50px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#home">VT</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-greeting">HEY THERE, I'M</p>
+      <h1 class="hero-name">Vaishnavi<br>Tiwari</h1>
+      <div class="hero-role">
+        <span id="typewriter"></span><span class="cursor"></span>
+      </div>
+      <p class="hero-bio">
+        M.S. Data Science graduate from DePaul University with a background spanning marketing analytics, business intelligence, and data science. I turn messy data into decisions that actually matter.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="photo.jpeg" alt="Vaishnavi Tiwari" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">Who I am</p>
+  <h2 class="section-title">About Me</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>M.S. Data Science graduate from DePaul University (GPA: 3.82) with a background that spans marketing analytics, business intelligence, and data science. Before grad school, I worked as an Associate Consultant at Regalix managing Google Ads campaigns for North American clients. That experience gave me a strong foundation in translating data into real business decisions.</p>
+      <p>My graduate work spans the full data science lifecycle, from building agentic AI systems with LlamaIndex and GPT-4o-mini, to benchmarking transformer models for document extraction, to classifying Alzheimer's cognitive decline using ensemble methods on clinical data.</p>
+      <p>I'm drawn to problems where data is complex, the stakes are real, and a well-built model can drive meaningful decisions, not just a good accuracy score.</p>
+      <p>Open to full-time roles in Data Analytics, BI Development, Marketing Analytics, and Data Science. Based in Chicago, open to hybrid and remote.</p>
+    </div>
+    <div class="edu-cards">
+      <div class="edu-card">
+        <div class="edu-school">DePaul University</div>
+        <div class="edu-degree">Master of Science in Data Science</div>
+        <div class="edu-degree" style="font-size:13px;color:var(--text3)">Concentration in Computational Methods</div>
+        <div class="edu-meta">JARVIS COLLEGE OF COMPUTING · CHICAGO, IL</div>
+        <div class="edu-meta">APR 2024 – MAR 2026</div>
+        <span class="edu-gpa">GPA: 3.82 / 4.0</span>
+      </div>
+      <div class="edu-card">
+        <div class="edu-school">Bhavan's Vivekananda College</div>
+        <div class="edu-degree">Bachelor of Computer Applications</div>
+        <div class="edu-meta">OSMANIA UNIVERSITY · HYDERABAD, INDIA</div>
+        <div class="edu-meta">2020 – 2023</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">What I work with</p>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h3>Languages</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">R</span>
+        <span class="skill-tag">Bash</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>ML / AI</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Scikit-Learn</span>
+        <span class="skill-tag">XGBoost</span>
+        <span class="skill-tag">LightGBM</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">HuggingFace</span>
+        <span class="skill-tag">LlamaIndex</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">Deep Learning</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>BI / Visualization</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Excel</span>
+        <span class="skill-tag">ggplot2</span>
+        <span class="skill-tag">Matplotlib</span>
+        <span class="skill-tag">Plotly</span>
+        <span class="skill-tag">Seaborn</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Data Engineering</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Apache Spark</span>
+        <span class="skill-tag">ETL Pipelines</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">REST APIs</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Cloud & Tools</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">AWS (S3, SageMaker)</span>
+        <span class="skill-tag">Google BigQuery</span>
+        <span class="skill-tag">Google Analytics</span>
+        <span class="skill-tag">Google Ads</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Git</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Statistics</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Hypothesis Testing</span>
+        <span class="skill-tag">A/B Testing</span>
+        <span class="skill-tag">PCA</span>
+        <span class="skill-tag">Bayesian Inference</span>
+        <span class="skill-tag">ROC-AUC</span>
+        <span class="skill-tag">Cross-Validation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">Where I've worked</p>
+  <h2 class="section-title">Experience</h2>
+  <div class="exp-list">
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Associate Consultant | Google Ads Account Strategist</div>
+        <div class="exp-date">NOV 2022 – FEB 2024</div>
+      </div>
+      <div class="exp-company">Regalix, A MarketStar Company · Hyderabad, India</div>
+      <ul class="exp-bullets">
+        <li>Managed Google Ads campaigns for North American SMB clients, serving a US-aligned shift and collaborating directly with clients on campaign strategy, budget allocation, and performance optimization.</li>
+        <li>Drove measurable ROI improvements through data-driven budget reallocation, precision audience segmentation, and iterative A/B testing of ad creatives and targeting parameters.</li>
+        <li>Monitored and analyzed KPIs including CTR, CPC, conversion rate, and ROAS using Google Analytics and Google Ads Manager, delivering performance reports and actionable insights to stakeholders.</li>
+        <li>Managed end-to-end campaign lifecycles across search, display, and remarketing channels, ensuring alignment with client business goals and budget constraints.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Customer Service Representative</div>
+        <div class="exp-date">DEC 2021 – JUN 2022</div>
+      </div>
+      <div class="exp-company">Synchrony Financial Services Pvt. Ltd. · Hyderabad, India</div>
+      <ul class="exp-bullets">
+        <li>Handled high-volume credit card operations for US-based customers at a Fortune 500 financial services company, covering dispute resolution, fraud prevention, and payment workflows.</li>
+        <li>Maintained consistently high CSAT scores in a fast-paced, metrics-driven environment requiring accuracy, compliance awareness, and customer empathy.</li>
+        <li>Awarded Role Model distinction for exceptional performance, teamwork, and operational discipline.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label">What I've built</p>
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+
+    <div class="proj-card">
+      <div class="proj-title">Alzheimer's Cognitive Decline Classification</div>
+      <p class="proj-desc">Built a multi-class classification pipeline to predict cognitive decline stages (Normal → MCI → Dementia) using the NACC Uniform Data Set. Applied SMOTE for class imbalance, XGBoost and LightGBM ensemble methods, and PCA for dimensionality reduction. Evaluated using ROC-AUC, confusion matrices, and cross-validation.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span>
+        <span class="proj-tag">XGBoost</span>
+        <span class="proj-tag">LightGBM</span>
+        <span class="proj-tag">SMOTE</span>
+        <span class="proj-tag">PCA</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/alzheimers-cognitive-classification" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-title">Cleantech ReAct Agentic AI System</div>
+      <p class="proj-desc">Built a multi-tool ReAct agent using LlamaIndex and GPT-4o-mini for specialized cleantech research. Implemented a 3-stage pipeline combining RAG retrieval, web search, and a reasoning engine. Used LLMRerank postprocessor (k=50, top-5 re-scored) and an ethical safety guardrail for responsible AI output.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span>
+        <span class="proj-tag">LlamaIndex</span>
+        <span class="proj-tag">GPT-4o-mini</span>
+        <span class="proj-tag">RAG</span>
+        <span class="proj-tag">ReAct</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/cleantech_react_agent" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-title">Invoice Information Extraction: Transformer Comparison</div>
+      <p class="proj-desc">Benchmarked LayoutLMv3 and Donut transformers on a structured invoice dataset across template-aware and template-agnostic settings. LayoutLMv3 achieved near-perfect F1 in template-aware conditions using Tesseract OCR and AdamW fine-tuning. Evaluated across token-level precision, recall, F1, and Exact Match Accuracy.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">LayoutLMv3</span>
+        <span class="proj-tag">Donut</span>
+        <span class="proj-tag">HuggingFace</span>
+        <span class="proj-tag">Tesseract OCR</span>
+        <span class="proj-tag">NLP</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/Invoice-Extraction" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-title">Amazon Ratings Recommender System</div>
+      <p class="proj-desc">Queried and processed Amazon electronics data using AWS Athena, stored in Parquet format on S3. Built a collaborative filtering model using PySpark ALS for personalized product recommendations. Designed a scalable pipeline covering data ingestion, model training, and recommendation generation.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">PySpark</span>
+        <span class="proj-tag">AWS Athena</span>
+        <span class="proj-tag">S3</span>
+        <span class="proj-tag">ALS</span>
+        <span class="proj-tag">Parquet</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-title">Refugee Asylum Data Analysis</div>
+      <p class="proj-desc">Analyzed 34,600+ UNHCR records to identify nations under high refugee pressure. Applied Random Forest for classification and validated clustering at k=3 using silhouette scoring, revealing 3 distinct country profiles with actionable policy recommendations.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span>
+        <span class="proj-tag">Random Forest</span>
+        <span class="proj-tag">KMeans</span>
+        <span class="proj-tag">DBSCAN</span>
+        <span class="proj-tag">UNHCR Data</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/refugee_asylum_analysis" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-title">FIFA Player Market Value Visualization</div>
+      <p class="proj-desc">Developed a data visualization suite exploring FIFA player market values using R and ggplot2. Built choropleth maps, polynomial-fit scatter plots, and annotated line charts across 18,000+ player records. Applied Gestalt design principles and loess smoothing throughout.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">R</span>
+        <span class="proj-tag">ggplot2</span>
+        <span class="proj-tag">RMarkdown</span>
+        <span class="proj-tag">Choropleth</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/FIFA-GroupProject" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Say hello</p>
+  <h2 class="section-title">Get In Touch</h2>
+  <p class="contact-desc">I'm actively looking for full-time opportunities in Data Analytics, BI, Marketing Analytics, and Data Science. Whether it's a role, a collaboration, or just a conversation, drop me a line.</p>
+  <div class="contact-links">
+    <a href="mailto:vaish.tiwari03@gmail.com" class="contact-link">
+      <span class="contact-icon">✉</span> vaish.tiwari03@gmail.com
+    </a>
+    <a href="https://linkedin.com/in/vaishnavi-tiwari-1a18971ab" target="_blank" class="contact-link">
+      <span class="contact-icon">in</span> LinkedIn
+    </a>
+    <a href="https://github.com/tiwari-vaish" target="_blank" class="contact-link">
+      <span class="contact-icon">⌥</span> GitHub
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Vaishnavi Tiwari · Chicago, IL · Open to hybrid & remote roles
+</footer>
+
+<script>
+  // Typewriter
+  const roles = ['Data Scientist', 'BI Analyst', 'Marketing Analyst', 'ML Engineer'];
+  let ri = 0, ci = 0, deleting = false;
+  const el = document.getElementById('typewriter');
+  function type() {
+    const word = roles[ri];
+    el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+    if (!deleting && ci > word.length) { deleting = true; setTimeout(type, 1400); return; }
+    if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; }
+    setTimeout(type, deleting ? 50 : 80);
+  }
+  setTimeout(type, 800);
+
+  // Scroll fade-in
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = 1; });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.proj-card, .exp-card, .edu-card, .skill-group').forEach(el => {
+    el.style.opacity = 0;
+    el.style.transition = 'opacity 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
