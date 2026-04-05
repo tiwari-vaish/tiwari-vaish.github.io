@@ -1,375 +1,634 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Vaishnavi Tiwari | Data Science Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			.section { display: none; }
-			.section.active { display: block; }
-			#header h1 a { color: #5a8c6e !important; }
-			#header nav.links a:hover { color: #5a8c6e !important; }
-			#sidebar #intro header h2 { color: #5a8c6e !important; }
-			article.post { border-left: 3px solid #b8d8e8; padding-left: 1.2em; }
-			#section-projects article.post:nth-child(1) { border-left-color: #b7d7c2; }
-			#section-projects article.post:nth-child(2) { border-left-color: #b8d8e8; }
-			#section-projects article.post:nth-child(3) { border-left-color: #d6ccf0; }
-			#section-projects article.post:nth-child(4) { border-left-color: #f7d9b5; }
-			#section-projects article.post:nth-child(5) { border-left-color: #f2c4c4; }
-			#section-skills article.post:nth-child(odd)  { border-left-color: #b7d7c2; }
-			#section-skills article.post:nth-child(even) { border-left-color: #b8d8e8; }
-			.button:hover { background-color: #5a8c6e !important; border-color: #5a8c6e !important; color: #fff !important; }
-			ul.stats li a { background: #d6ccf0 !important; color: #3a3a4a !important; border-radius: 3px; padding: 2px 8px; font-size: 0.85em; }
-		</style>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaishnavi Tiwari | Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #FAF7F4;
+      --bg2: #F2EDE8;
+      --surface: #FFFFFF;
+      --accent: #8B6B5E;
+      --accent2: #C3ADA5;
+      --accent3: #5C3D2E;
+      --text: #1E1410;
+      --text2: #6B5147;
+      --text3: #A08070;
+      --border: rgba(139,107,94,0.15);
+      --shadow: rgba(92,61,46,0.08);
+      --tag-bg: rgba(195,173,165,0.2);
+      --tag-border: rgba(139,107,94,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 
-		<div id="wrapper">
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,247,244,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px; color: var(--accent3);
+      text-decoration: none; letter-spacing: 0.3px;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-size: 14px; font-weight: 500; color: var(--text2);
+      text-decoration: none; letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent3); }
+    .nav-cta {
+      background: var(--accent3); color: white !important;
+      padding: 8px 20px; border-radius: 6px;
+      font-size: 13px !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent) !important; color: white !important; }
 
-			<header id="header">
-				<h1><a href="javascript:void(0)" data-section="home">Vaishnavi Tiwari</a></h1>
-				<nav class="links">
-					<ul>
-						<li><a href="javascript:void(0)" data-section="about">About</a></li>
-						<li><a href="javascript:void(0)" data-section="projects">Projects</a></li>
-						<li><a href="javascript:void(0)" data-section="skills">Skills</a></li>
-						<li><a href="javascript:void(0)" data-section="contact">Contact</a></li>
-					</ul>
-				</nav>
-				<nav class="main">
-					<ul>
-						<li class="menu">
-							<a class="fa-bars" href="#menu">Menu</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
+    /* SECTIONS */
+    section { padding: 100px 10%; }
+    section:nth-child(even) { background: var(--bg2); }
 
-			<section id="menu">
-				<section>
-					<ul class="links">
-						<li><a href="javascript:void(0)" data-section="about"><h3>About</h3><p>Who I am and what I do</p></a></li>
-						<li><a href="javascript:void(0)" data-section="projects"><h3>Projects</h3><p>My data science work</p></a></li>
-						<li><a href="javascript:void(0)" data-section="skills"><h3>Skills</h3><p>Tools and technologies</p></a></li>
-						<li><a href="javascript:void(0)" data-section="contact"><h3>Contact</h3><p>Get in touch</p></a></li>
-					</ul>
-				</section>
-				<section>
-					<ul class="actions stacked">
-						<li><a href="#" class="button large fit">Resume</a></li>
-					</ul>
-				</section>
-			</section>
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--accent);
+      letter-spacing: 3px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--accent3); line-height: 1.15;
+      margin-bottom: 48px;
+    }
 
-			<div id="main">
+    /* HERO */
+    #home {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding-top: 64px;
+      background: var(--bg);
+    }
+    .hero-inner {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 60px;
+      width: 100%;
+    }
+    .hero-text { flex: 1; }
+    .hero-greeting {
+      font-family: 'DM Mono', monospace;
+      font-size: 14px; color: var(--accent);
+      letter-spacing: 2px; margin-bottom: 16px;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.1s;
+    }
+    .hero-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(42px, 6vw, 80px);
+      color: var(--accent3); line-height: 1.05;
+      margin-bottom: 16px;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.2s;
+    }
+    .hero-role {
+      font-size: 20px; color: var(--text2); font-weight: 300;
+      margin-bottom: 24px; min-height: 32px;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.3s;
+    }
+    .cursor { display: inline-block; width: 2px; height: 22px; background: var(--accent); animation: blink 1s infinite; vertical-align: middle; margin-left: 2px; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .hero-bio {
+      font-size: 16px; color: var(--text2); max-width: 540px; line-height: 1.8;
+      margin-bottom: 36px;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.4s;
+    }
+    .hero-btns {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.5s;
+    }
+    .btn-primary {
+      background: var(--accent3); color: white;
+      padding: 14px 32px; border-radius: 8px;
+      font-size: 15px; font-weight: 500;
+      text-decoration: none; transition: background 0.2s, transform 0.1s;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+    .btn-secondary {
+      border: 1.5px solid var(--accent2); color: var(--accent3);
+      padding: 13px 32px; border-radius: 8px;
+      font-size: 15px; font-weight: 500;
+      text-decoration: none; transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { background: var(--tag-bg); }
+    .hero-img {
+      width: 320px; height: 320px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--bg2);
+      border: 4px solid var(--accent2);
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; animation: fadeUp 0.6s ease forwards 0.3s;
+    }
+    .hero-initials {
+      font-family: 'DM Serif Display', serif;
+      font-size: 80px; color: var(--accent2);
+    }
 
-				<!-- HOME -->
-				<div id="section-home" class="section active">
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Hi, I'm Vaishnavi Tiwari</h2>
-								<p>Data Science Graduate · DePaul University, Chicago</p>
-							</div>
-						</header>
-						<p>I'm a Data Science graduate with hands-on experience building end-to-end ML pipelines, NLP systems, and agentic AI applications. My work spans the full data science lifecycle from raw data wrangling and feature engineering to model training, evaluation, and communicating results to stakeholders.</p>
-						<p>I'm particularly interested in how machine learning can be applied to real-world problems in healthcare, finance, and policy. Whether it's classifying Alzheimer's progression from clinical data, extracting structured information from documents using transformers, or building a ReAct agent that reasons over live and historical data. I care about building things that actually work and are interpretable.</p>
-						<footer>
-							<ul class="actions">
-								<li><a href="javascript:void(0)" class="button large" data-section="projects">View My Projects</a></li>
-								<li><a href="javascript:void(0)" class="button large" data-section="about">About Me</a></li>
-							</ul>
-						</footer>
-					</article>
-				</div>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
-				<!-- ABOUT -->
-				<div id="section-about" class="section">
-					<article class="post">
-						<header><div class="title"><h2>About Me</h2><p>Data Scientist · Chicago, IL</p></div></header>
-						<p>I'm a Data Science graduate from DePaul University with a background in machine learning, NLP, and business intelligence. I'm drawn to problems where data is messy, the stakes are real, and the solution requires more than plugging in a model, things like clinical prediction, document understanding, and agentic AI systems that reason over multiple sources.</p>
-						<p>Before grad school, I worked as a Google Ads Account Strategist at Regalix, where I used analytics and A/B testing to optimize campaigns and drive a 15% ROI increase for North American small and mid-sized businesses. That experience gave me a strong foundation in translating data into business decisions, which I now apply in a more technical context.</p>
-						<p>Outside of coursework and projects, I practice SQL regularly on platforms like DataLemur, with a focus on window functions and query optimization. I believe clean, efficient queries are just as important as a well-tuned model.</p>
-					</article>
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .about-text p { color: var(--text2); font-size: 16px; line-height: 1.9; margin-bottom: 16px; }
+    .edu-cards { display: flex; flex-direction: column; gap: 20px; }
+    .edu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      transition: box-shadow 0.2s;
+    }
+    .edu-card:hover { box-shadow: 0 4px 20px var(--shadow); }
+    .edu-school {
+      font-family: 'DM Serif Display', serif;
+      font-size: 17px; color: var(--accent3); margin-bottom: 4px;
+    }
+    .edu-degree { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+    .edu-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--text3); letter-spacing: 1px;
+    }
+    .edu-gpa {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--accent);
+    }
 
-					<article class="post">
-						<header><div class="title"><h2>Education</h2></div></header>
-						<p>
-							<strong>M.S. Data Science</strong><br />
-							DePaul University, Jarvis College of Computing and Digital Media · Chicago, IL<br />
-							Graduated 2026<br />
-							Coursework: Machine Learning, Advanced Data Analysis, Regression, NLP, Python, Data Visualization
-						</p>
-						<p>
-							<strong>B.S. Computer Applications</strong><br />
-							Bhavan's Vivekananda College of Science, Humanities and Commerce · Hyderabad, India<br />
-							Graduated June 2023
-						</p>
-					</article>
+    /* SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+    .skill-group h3 {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--accent);
+      letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 16px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 13px; color: var(--text2);
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .skill-tag:hover { background: var(--accent2); border-color: var(--accent); color: var(--accent3); }
 
-					<article class="post">
-						<header><div class="title"><h2>Work Experience</h2></div></header>
-						<p>
-							<strong>Google Ads Account Strategist</strong><br />
-							Regalix, A MarketStar Company · Hyderabad, India · Nov 2022 – Feb 2024<br /><br />
-							Managed Google Ads campaigns for North American small and mid-sized businesses, achieving a 15% ROI increase through data-driven budget allocation, precision audience segmentation, and A/B testing. Leveraged Google Analytics and automation tools to monitor KPIs, generate performance reports, and surface actionable insights for stakeholders.
-						</p>
-						<p>
-							<strong>Customer Service Representative</strong><br />
-							Synchrony Financial Services Pvt. Ltd. · Hyderabad, India · Dec 2021 – Jun 2022<br /><br />
-							Maintained top CSAT scores handling high-volume credit card support including dispute resolution, fraud prevention, and payment workflows. Awarded Role Model distinction for exceptional performance and operational discipline.
-						</p>
-					</article>
+    /* EXPERIENCE */
+    .exp-list { display: flex; flex-direction: column; gap: 32px; }
+    .exp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 36px;
+      transition: box-shadow 0.2s;
+    }
+    .exp-card:hover { box-shadow: 0 4px 24px var(--shadow); }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 6px; }
+    .exp-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px; color: var(--accent3);
+    }
+    .exp-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--text3);
+      letter-spacing: 1px; padding-top: 4px;
+    }
+    .exp-company { font-size: 14px; color: var(--accent); font-weight: 500; margin-bottom: 16px; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .exp-bullets li {
+      font-size: 15px; color: var(--text2); line-height: 1.7;
+      padding-left: 20px; position: relative;
+    }
+    .exp-bullets li::before {
+      content: ''; position: absolute; left: 0; top: 11px;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent2);
+    }
 
-					<article class="post">
-						<header><div class="title"><h2>Certifications</h2></div></header>
-						<p>Cybersecurity Fundamentals · Python and R Programming · Digital Marketing (Google) · Power BI and Excel Data Analysis</p>
-						<footer>
-							<ul class="actions">
-								<li><a href="#" class="button large">Download Resume</a></li>
-							</ul>
-						</footer>
-					</article>
-				</div>
+    /* PROJECTS */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
+    .proj-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+      display: flex; flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .proj-card:hover { box-shadow: 0 8px 32px var(--shadow); transform: translateY(-3px); }
+    .proj-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px; color: var(--accent3);
+      margin-bottom: 12px; line-height: 1.3;
+    }
+    .proj-desc { font-size: 14px; color: var(--text2); line-height: 1.75; flex: 1; margin-bottom: 20px; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+    .proj-tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--accent);
+    }
+    .proj-links { display: flex; gap: 12px; }
+    .proj-link {
+      font-size: 13px; font-weight: 500; color: var(--accent3);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 7px 16px; border-radius: 6px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .proj-link:hover { background: var(--tag-bg); border-color: var(--accent2); }
 
-				<!-- PROJECTS -->
-				<div id="section-projects" class="section">
+    /* CONTACT */
+    #contact { text-align: center; }
+    .contact-desc { font-size: 17px; color: var(--text2); max-width: 520px; margin: 0 auto 48px; line-height: 1.8; }
+    .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .contact-link {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 28px;
+      font-size: 15px; color: var(--text2); font-weight: 500;
+      text-decoration: none;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .contact-link:hover { box-shadow: 0 4px 16px var(--shadow); border-color: var(--accent2); color: var(--accent3); }
+    .contact-icon { font-size: 20px; }
 
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Alzheimer's Cognitive Decline Classification</h2>
-								<p>M.S. Capstone · Python · XGBoost · LightGBM · NACC Uniform Data Set</p>
-							</div>
-							<div class="meta">
-								<time class="published" datetime="2025-03-01">March 2025</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
-							</div>
-						</header>
-						<p>Built a multi-class classification pipeline to predict cognitive decline stages (Normal, MCI, Dementia) using the NACC Uniform Data Set. Applied feature engineering, SMOTE for class imbalance, and ensemble methods including XGBoost and LightGBM. Performed dimensionality reduction via PCA and evaluated models using ROC-AUC, confusion matrices, and cross-validation.</p>
-						<footer>
-							<ul class="actions">
-								<li><a href="https://github.com/tiwari-vaish/alzheimers-cognitive-classification" class="button large" target="_blank">View on GitHub</a></li>
-							</ul>
-							<ul class="stats">
-								<li><a href="#">Machine Learning</a></li>
-								<li><a href="#">Healthcare</a></li>
-								<li><a href="#">Classification</a></li>
-							</ul>
-						</footer>
-					</article>
+    /* FOOTER */
+    footer {
+      text-align: center; padding: 32px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px; color: var(--text3);
+      border-top: 1px solid var(--border);
+    }
 
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Cleantech ReAct Agentic AI System</h2>
-								<p>Python · LlamaIndex · GPT-4o-mini · RAG · ReAct Agents</p>
-							</div>
-							<div class="meta">
-								<time class="published" datetime="2024-11-01">November 2024</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
-							</div>
-						</header>
-						<p>Built a multi-tool ReAct agent using LlamaIndex for specialized cleantech research, with a strict tool hierarchy: internal RAG, web search, reasoning engine, and ethical safety guardrail. The RAG foundation used a HuggingFace BGE-Small embedding model with 3,072-token chunks, augmented by an LLMRerank postprocessor that retrieves k=50 candidates then re-scores to the top 5 using GPT-4o-mini.</p>
-						<footer>
-							<ul class="actions">
-								<li><a href="https://github.com/tiwari-vaish/cleantech_react_agent" class="button large" target="_blank">View on GitHub</a></li>
-							</ul>
-							<ul class="stats">
-								<li><a href="#">Agentic AI</a></li>
-								<li><a href="#">LLM</a></li>
-								<li><a href="#">RAG</a></li>
-							</ul>
-						</footer>
-					</article>
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 0 5%; }
+      .nav-links { display: none; }
+      section { padding: 80px 6%; }
+      .hero-inner { flex-direction: column-reverse; text-align: center; }
+      .hero-btns { justify-content: center; }
+      .hero-img { width: 200px; height: 200px; }
+      .hero-initials { font-size: 50px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Invoice Information Extraction: Transformer Comparison</h2>
-								<p>LayoutLMv3 · Donut · HuggingFace · Tesseract OCR</p>
-							</div>
-							<div class="meta">
-								<time class="published" datetime="2024-09-01">September 2024</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
-							</div>
-						</header>
-						<p>Benchmarked LayoutLMv3 and Donut transformers on a 10,000-invoice dataset across template-aware and template-agnostic settings. LayoutLMv3 achieved perfect F1 in template-aware conditions. Donut processed raw images directly into structured JSON without OCR, showing stronger robustness to unseen layouts. Evaluated across token-level precision, recall, F1, and Exact Match Accuracy.</p>
-						<footer>
-							<ul class="actions">
-								<li><a href="https://github.com/tiwari-vaish/Invoice-Extraction" class="button large" target="_blank">View on GitHub</a></li>
-							</ul>
-							<ul class="stats">
-								<li><a href="#">NLP</a></li>
-								<li><a href="#">Transformers</a></li>
-								<li><a href="#">Document AI</a></li>
-							</ul>
-						</footer>
-					</article>
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#home">VT</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
 
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>FIFA Player Market Value Visualization</h2>
-								<p>R · ggplot2 · RMarkdown · Choropleth · Scatter Plots</p>
-							</div>
-							<div class="meta">
-								<time class="published" datetime="2024-06-01">June 2024</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
-							</div>
-						</header>
-						<p>Developed a data visualization suite exploring FIFA player market values using R and ggplot2. Built choropleth maps of global player distribution, polynomial-fit scatter plots of age vs. market value by position, and annotated line charts tracking top player valuations over time. Applied Gestalt design principles and loess smoothing across 18,000+ player records.</p>
-						<footer>
-							<ul class="actions">
-								<li><a href="https://github.com/tiwari-vaish/FIFA-GroupProject" class="button large" target="_blank">View on GitHub</a></li>
-							</ul>
-							<ul class="stats">
-								<li><a href="#">Data Visualization</a></li>
-								<li><a href="#">R</a></li>
-								<li><a href="#">Sports Analytics</a></li>
-							</ul>
-						</footer>
-					</article>
+<!-- HERO -->
+<section id="home">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-greeting">HEY THERE, I'M</p>
+      <h1 class="hero-name">Vaishnavi<br>Tiwari</h1>
+      <div class="hero-role">
+        <span id="typewriter"></span><span class="cursor"></span>
+      </div>
+      <p class="hero-bio">
+        M.S. Data Science graduate from DePaul University with a background spanning marketing analytics, business intelligence, and data science. I turn messy data into decisions that actually matter.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="photo.jpeg" alt="Vaishnavi Tiwari" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
+    </div>
+  </div>
+</section>
 
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Refugee Asylum Data Analysis</h2>
-								<p>Python · Scikit-Learn · Random Forest · KMeans · UNHCR Data</p>
-							</div>
-							<div class="meta">
-								<time class="published" datetime="2024-03-01">March 2024</time>
-								<a href="#" class="author"><span class="name">Vaishnavi Tiwari</span></a>
-							</div>
-						</header>
-						<p>Analyzed 34,600 UNHCR records to identify nations under high refugee pressure and uncover global displacement patterns. Engineered Total Displaced and Asylum Pressure features to capture raw burden and relative strain. Random Forest achieved F1 greater than 0.80. Applied KMeans, Hierarchical, and DBSCAN clustering (silhouette-validated at k=3) to reveal three distinct country profiles with policy recommendations.</p>
-						<footer>
-							<ul class="actions">
-								<li><a href="https://github.com/tiwari-vaish/refugee_asylum_analysis" class="button large" target="_blank">View on GitHub</a></li>
-							</ul>
-							<ul class="stats">
-								<li><a href="#">Machine Learning</a></li>
-								<li><a href="#">Clustering</a></li>
-								<li><a href="#">Policy Analytics</a></li>
-							</ul>
-						</footer>
-					</article>
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">Who I am</p>
+  <h2 class="section-title">About Me</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>M.S. Data Science graduate from DePaul University (GPA: 3.82) with a background that spans marketing analytics, business intelligence, and data science. Before grad school, I worked as an Associate Consultant at Regalix managing Google Ads campaigns for North American clients. That experience gave me a strong foundation in translating data into real business decisions.</p>
+      <p>My graduate work spans the full data science lifecycle, from building agentic AI systems with LlamaIndex and GPT-4o-mini, to benchmarking transformer models for document extraction, to classifying Alzheimer's cognitive decline using ensemble methods on clinical data.</p>
+      <p>I'm drawn to problems where data is complex, the stakes are real, and a well-built model can drive meaningful decisions, not just a good accuracy score.</p>
+      <p>Open to full-time roles in Data Analytics, BI Development, Marketing Analytics, and Data Science. Based in Chicago, open to hybrid and remote.</p>
+    </div>
+    <div class="edu-cards">
+      <div class="edu-card">
+        <div class="edu-school">DePaul University</div>
+        <div class="edu-degree">Master of Science in Data Science</div>
+        <div class="edu-degree" style="font-size:13px;color:var(--text3)">Concentration in Computational Methods</div>
+        <div class="edu-meta">JARVIS COLLEGE OF COMPUTING · CHICAGO, IL</div>
+        <div class="edu-meta">APR 2024 – MAR 2026</div>
+        <span class="edu-gpa">GPA: 3.82 / 4.0</span>
+      </div>
+      <div class="edu-card">
+        <div class="edu-school">Bhavan's Vivekananda College</div>
+        <div class="edu-degree">Bachelor of Computer Applications</div>
+        <div class="edu-meta">OSMANIA UNIVERSITY · HYDERABAD, INDIA</div>
+        <div class="edu-meta">2020 – 2023</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-				</div>
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">What I work with</p>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h3>Languages</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">R</span>
+        <span class="skill-tag">Bash</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>ML / AI</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Scikit-Learn</span>
+        <span class="skill-tag">XGBoost</span>
+        <span class="skill-tag">LightGBM</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">HuggingFace</span>
+        <span class="skill-tag">LlamaIndex</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">Deep Learning</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>BI / Visualization</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Excel</span>
+        <span class="skill-tag">ggplot2</span>
+        <span class="skill-tag">Matplotlib</span>
+        <span class="skill-tag">Plotly</span>
+        <span class="skill-tag">Seaborn</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Data Engineering</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Apache Spark</span>
+        <span class="skill-tag">ETL Pipelines</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">REST APIs</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Cloud & Tools</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">AWS (S3, SageMaker)</span>
+        <span class="skill-tag">Google BigQuery</span>
+        <span class="skill-tag">Google Analytics</span>
+        <span class="skill-tag">Google Ads</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Git</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Statistics</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Hypothesis Testing</span>
+        <span class="skill-tag">A/B Testing</span>
+        <span class="skill-tag">PCA</span>
+        <span class="skill-tag">Bayesian Inference</span>
+        <span class="skill-tag">ROC-AUC</span>
+        <span class="skill-tag">Cross-Validation</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-				<!-- SKILLS -->
-				<div id="section-skills" class="section">
-					<article class="post">
-						<header><div class="title"><h2>Languages</h2></div></header>
-						<p>Python (Pandas, NumPy, Scikit-Learn, TensorFlow, Keras, XGBoost, LightGBM, Matplotlib, Seaborn, Plotly), R (tidyverse, ggplot2, caret), SQL, Bash</p>
-					</article>
-					<article class="post">
-						<header><div class="title"><h2>Machine Learning and AI</h2></div></header>
-						<p>Supervised and Unsupervised Learning, Regression, Classification, Clustering, Ensemble Methods, ARIMA, NLP, Transformers (LayoutLMv3, Donut, BERT), RAG, ReAct Agents, LlamaIndex, HuggingFace, Prompt Engineering</p>
-					</article>
-					<article class="post">
-						<header><div class="title"><h2>BI and Visualization</h2></div></header>
-						<p>Tableau, Power BI (DAX, Power Query), Excel (Pivot Tables, VLOOKUP, Macros), Matplotlib, Seaborn, Plotly, ggplot2</p>
-					</article>
-					<article class="post">
-						<header><div class="title"><h2>Data Engineering</h2></div></header>
-						<p>ETL Pipelines, Data Wrangling, Feature Engineering, Data Cleaning, MySQL, PostgreSQL, MongoDB, Apache Spark, REST APIs</p>
-					</article>
-					<article class="post">
-						<header><div class="title"><h2>Cloud and Tools</h2></div></header>
-						<p>AWS (S3, SageMaker), Google BigQuery, Google Analytics, Google Ads Manager, Git, GitHub, Docker, Jupyter, Google Colab</p>
-					</article>
-					<article class="post">
-						<header><div class="title"><h2>Statistics</h2></div></header>
-						<p>Hypothesis Testing, Bayesian Inference, PCA, Dimensionality Reduction, Multivariate Analysis, A/B Testing, Cross-Validation, Confusion Matrix, ROC-AUC</p>
-					</article>
-				</div>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">Where I've worked</p>
+  <h2 class="section-title">Experience</h2>
+  <div class="exp-list">
 
-				<!-- CONTACT -->
-				<div id="section-contact" class="section">
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Get In Touch</h2>
-								<p>Open to full-time Data Science opportunities</p>
-							</div>
-						</header>
-						<p>I'm a recent M.S. Data Science graduate from DePaul University actively looking for full-time roles. Feel free to reach out via any of the channels below.</p>
-						<h3>Email</h3>
-						<p><a href="mailto:vaish.tiwari03@gmail.com">vaish.tiwari03@gmail.com</a></p>
-						<h3>LinkedIn</h3>
-						<p><a href="https://www.linkedin.com/in/vaishnavi-tiwari-1a18971ab" target="_blank">linkedin.com/in/vaishnavi-tiwari</a></p>
-						<h3>GitHub</h3>
-						<p><a href="https://github.com/tiwari-vaish" target="_blank">github.com/tiwari-vaish</a></p>
-						<h3>Location</h3>
-						<p>Chicago, IL (Open to remote and hybrid roles)</p>
-						<footer>
-							<ul class="actions">
-								<li><a href="mailto:vaish.tiwari03@gmail.com" class="button large">Email Me</a></li>
-								<li><a href="#" class="button large">Download Resume</a></li>
-							</ul>
-						</footer>
-					</article>
-				</div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Associate Consultant | Google Ads Account Strategist</div>
+        <div class="exp-date">NOV 2022 – FEB 2024</div>
+      </div>
+      <div class="exp-company">Regalix, A MarketStar Company · Hyderabad, India</div>
+      <ul class="exp-bullets">
+        <li>Managed Google Ads campaigns for North American SMB clients, serving a US-aligned shift and collaborating directly with clients on campaign strategy, budget allocation, and performance optimization.</li>
+        <li>Drove measurable ROI improvements through data-driven budget reallocation, precision audience segmentation, and iterative A/B testing of ad creatives and targeting parameters.</li>
+        <li>Monitored and analyzed KPIs including CTR, CPC, conversion rate, and ROAS using Google Analytics and Google Ads Manager, delivering performance reports and actionable insights to stakeholders.</li>
+        <li>Managed end-to-end campaign lifecycles across search, display, and remarketing channels, ensuring alignment with client business goals and budget constraints.</li>
+      </ul>
+    </div>
 
-			</div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Customer Service Representative</div>
+        <div class="exp-date">DEC 2021 – JUN 2022</div>
+      </div>
+      <div class="exp-company">Synchrony Financial Services Pvt. Ltd. · Hyderabad, India</div>
+      <ul class="exp-bullets">
+        <li>Handled high-volume credit card operations for US-based customers at a Fortune 500 financial services company, covering dispute resolution, fraud prevention, and payment workflows.</li>
+        <li>Maintained consistently high CSAT scores in a fast-paced, metrics-driven environment requiring accuracy, compliance awareness, and customer empathy.</li>
+        <li>Awarded Role Model distinction for exceptional performance, teamwork, and operational discipline.</li>
+      </ul>
+    </div>
 
-			<!-- Sidebar -->
-			<section id="sidebar">
-				<section id="intro">
-					<header>
-						<h2>Vaishnavi Tiwari</h2>
-						<p>M.S. Data Science · DePaul University, Chicago</p>
-					</header>
-				</section>
+  </div>
+</section>
 
-				<section class="blurb">
-					<h2>Quick Links</h2>
-					<ul class="actions stacked">
-						<li><a href="javascript:void(0)" class="button fit" data-section="projects">Projects</a></li>
-						<li><a href="javascript:void(0)" class="button fit" data-section="skills">Skills</a></li>
-						<li><a href="javascript:void(0)" class="button fit" data-section="contact">Contact</a></li>
-						<li><a href="#" class="button fit">Resume</a></li>
-					</ul>
-				</section>
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label">What I've built</p>
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
 
-				<section id="footer">
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/vaishnavi-tiwari-1a18971ab" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/tiwari-vaish" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-						<li><a href="mailto:vaish.tiwari03@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<p class="copyright">&copy; Vaishnavi Tiwari 2025. Template: <a href="http://html5up.net">HTML5 UP</a>.</p>
-				</section>
-			</section>
+    <div class="proj-card">
+      <div class="proj-title">Alzheimer's Cognitive Decline Classification</div>
+      <p class="proj-desc">Built a multi-class classification pipeline to predict cognitive decline stages (Normal → MCI → Dementia) using the NACC Uniform Data Set. Applied SMOTE for class imbalance, XGBoost and LightGBM ensemble methods, and PCA for dimensionality reduction. Evaluated using ROC-AUC, confusion matrices, and cross-validation.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span>
+        <span class="proj-tag">XGBoost</span>
+        <span class="proj-tag">LightGBM</span>
+        <span class="proj-tag">SMOTE</span>
+        <span class="proj-tag">PCA</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/alzheimers-cognitive-classification" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
 
-		</div>
+    <div class="proj-card">
+      <div class="proj-title">Cleantech ReAct Agentic AI System</div>
+      <p class="proj-desc">Built a multi-tool ReAct agent using LlamaIndex and GPT-4o-mini for specialized cleantech research. Implemented a 3-stage pipeline combining RAG retrieval, web search, and a reasoning engine. Used LLMRerank postprocessor (k=50, top-5 re-scored) and an ethical safety guardrail for responsible AI output.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span>
+        <span class="proj-tag">LlamaIndex</span>
+        <span class="proj-tag">GPT-4o-mini</span>
+        <span class="proj-tag">RAG</span>
+        <span class="proj-tag">ReAct</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/cleantech_react_agent" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+    <div class="proj-card">
+      <div class="proj-title">Invoice Information Extraction: Transformer Comparison</div>
+      <p class="proj-desc">Benchmarked LayoutLMv3 and Donut transformers on a structured invoice dataset across template-aware and template-agnostic settings. LayoutLMv3 achieved near-perfect F1 in template-aware conditions using Tesseract OCR and AdamW fine-tuning. Evaluated across token-level precision, recall, F1, and Exact Match Accuracy.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">LayoutLMv3</span>
+        <span class="proj-tag">Donut</span>
+        <span class="proj-tag">HuggingFace</span>
+        <span class="proj-tag">Tesseract OCR</span>
+        <span class="proj-tag">NLP</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/Invoice-Extraction" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
 
-		<script>
-			function showSection(name) {
-				document.querySelectorAll('.section').forEach(function(el) {
-					el.classList.remove('active');
-				});
-				var target = document.getElementById('section-' + name);
-				if (target) { target.classList.add('active'); }
-				window.scrollTo(0, 0);
-			}
+    <div class="proj-card">
+      <div class="proj-title">Amazon Ratings Recommender System</div>
+      <p class="proj-desc">Queried and processed Amazon electronics data using AWS Athena, stored in Parquet format on S3. Built a collaborative filtering model using PySpark ALS for personalized product recommendations. Designed a scalable pipeline covering data ingestion, model training, and recommendation generation.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">PySpark</span>
+        <span class="proj-tag">AWS Athena</span>
+        <span class="proj-tag">S3</span>
+        <span class="proj-tag">ALS</span>
+        <span class="proj-tag">Parquet</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
 
-			$(window).on('load', function() {
-				$(document).on('click', '[data-section]', function(e) {
-					e.preventDefault();
-					e.stopImmediatePropagation();
-					showSection($(this).data('section'));
-				});
-			});
-		</script>
+    <div class="proj-card">
+      <div class="proj-title">Refugee Asylum Data Analysis</div>
+      <p class="proj-desc">Analyzed 34,600+ UNHCR records to identify nations under high refugee pressure. Applied Random Forest for classification and validated clustering at k=3 using silhouette scoring, revealing 3 distinct country profiles with actionable policy recommendations.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span>
+        <span class="proj-tag">Random Forest</span>
+        <span class="proj-tag">KMeans</span>
+        <span class="proj-tag">DBSCAN</span>
+        <span class="proj-tag">UNHCR Data</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/refugee_asylum_analysis" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
 
-	</body>
+    <div class="proj-card">
+      <div class="proj-title">FIFA Player Market Value Visualization</div>
+      <p class="proj-desc">Developed a data visualization suite exploring FIFA player market values using R and ggplot2. Built choropleth maps, polynomial-fit scatter plots, and annotated line charts across 18,000+ player records. Applied Gestalt design principles and loess smoothing throughout.</p>
+      <div class="proj-tags">
+        <span class="proj-tag">R</span>
+        <span class="proj-tag">ggplot2</span>
+        <span class="proj-tag">RMarkdown</span>
+        <span class="proj-tag">Choropleth</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/tiwari-vaish/FIFA-GroupProject" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Say hello</p>
+  <h2 class="section-title">Get In Touch</h2>
+  <p class="contact-desc">I'm actively looking for full-time opportunities in Data Analytics, BI, Marketing Analytics, and Data Science. Whether it's a role, a collaboration, or just a conversation, drop me a line.</p>
+  <div class="contact-links">
+    <a href="mailto:vaish.tiwari03@gmail.com" class="contact-link">
+      <span class="contact-icon">✉</span> vaish.tiwari03@gmail.com
+    </a>
+    <a href="https://linkedin.com/in/vaishnavi-tiwari-1a18971ab" target="_blank" class="contact-link">
+      <span class="contact-icon">in</span> LinkedIn
+    </a>
+    <a href="https://github.com/tiwari-vaish" target="_blank" class="contact-link">
+      <span class="contact-icon">⌥</span> GitHub
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Vaishnavi Tiwari · Chicago, IL · Open to hybrid & remote roles
+</footer>
+
+<script>
+  // Typewriter
+  const roles = ['Data Scientist', 'BI Analyst', 'Marketing Analyst', 'ML Engineer'];
+  let ri = 0, ci = 0, deleting = false;
+  const el = document.getElementById('typewriter');
+  function type() {
+    const word = roles[ri];
+    el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+    if (!deleting && ci > word.length) { deleting = true; setTimeout(type, 1400); return; }
+    if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; }
+    setTimeout(type, deleting ? 50 : 80);
+  }
+  setTimeout(type, 800);
+
+  // Scroll fade-in
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = 1; });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.proj-card, .exp-card, .edu-card, .skill-group').forEach(el => {
+    el.style.opacity = 0;
+    el.style.transition = 'opacity 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
 </html>
