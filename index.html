@@ -331,7 +331,7 @@
         <span id="typewriter"></span><span class="cursor"></span>
       </div>
       <p class="hero-bio">
-        M.S. Data Science graduate from DePaul University with a background spanning marketing analytics, business intelligence, and data science. I turn messy data into decisions that actually matter.
+        I'm a Data Science graduate from DePaul University, Chicago. 
       </p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">View My Work</a>
@@ -350,10 +350,11 @@
   <h2 class="section-title">About Me</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>M.S. Data Science graduate from DePaul University (GPA: 3.82) with a background that spans marketing analytics, business intelligence, and data science. Before grad school, I worked as an Associate Consultant at Regalix managing Google Ads campaigns for North American clients. That experience gave me a strong foundation in translating data into real business decisions.</p>
-      <p>My graduate work spans the full data science lifecycle, from building agentic AI systems with LlamaIndex and GPT-4o-mini, to benchmarking transformer models for document extraction, to classifying Alzheimer's cognitive decline using ensemble methods on clinical data.</p>
-      <p>I'm drawn to problems where data is complex, the stakes are real, and a well-built model can drive meaningful decisions, not just a good accuracy score.</p>
-      <p>Open to full-time roles in Data Analytics, BI Development, Marketing Analytics, and Data Science. Based in Chicago, open to hybrid and remote.</p>
+      <p>I'm a Data Science graduate from DePaul University, but my journey didn't start in data science. It started in Google Ads.</p>
+      <p>For over a year, I worked as an Associate Consultant at Regalix, managing advertising campaigns for North American businesses. I was good at it. But the more I worked with campaign data, the more I kept asking questions that went beyond the dashboard - why did this audience convert better? what does this pattern actually mean? is there a smarter way to decide where the budget should go? Those questions kept pulling me deeper.</p>
+      <p>So I made a decision. I enrolled in the M.S. Data Science program at DePaul University to properly answer those questions. And it opened up a whole world machine learning, NLP, agentic AI systems, clinical data, policy data, financial data. I realized data was not just a tool for reporting. It was a way of thinking.</p>
+      <p>I graduated with a set of projects that I'm genuinely proud of. I'm now looking for opportunities where I can bring both sides of my background together, the business instinct I built in marketing analytics and the technical depth I developed in grad school.</p>
+      
     </div>
     <div class="edu-cards">
       <div class="edu-card">
@@ -494,7 +495,7 @@
 
     <div class="proj-card">
       <div class="proj-title">Alzheimer's Cognitive Decline Classification</div>
-      <p class="proj-desc">Built a multi-class classification pipeline to predict cognitive decline stages (Normal → MCI → Dementia) using the NACC Uniform Data Set. Applied SMOTE for class imbalance, XGBoost and LightGBM ensemble methods, and PCA for dimensionality reduction. Evaluated using ROC-AUC, confusion matrices, and cross-validation.</p>
+      <p class="proj-desc">Can a machine learn to spot early signs of Alzheimer's from clinical data? I tried to find out. Using patient records from a national research database, I trained models to classify whether someone was cognitively healthy, showing mild decline, or in full dementia. The hard part was that the data was imbalanced far fewer dementia cases than healthy ones, so I had to get creative with how I trained the models to not just guess "healthy" every time.</p>
       <div class="proj-tags">
         <span class="proj-tag">Python</span>
         <span class="proj-tag">XGBoost</span>
@@ -509,7 +510,7 @@
 
     <div class="proj-card">
       <div class="proj-title">Cleantech ReAct Agentic AI System</div>
-      <p class="proj-desc">Built a multi-tool ReAct agent using LlamaIndex and GPT-4o-mini for specialized cleantech research. Implemented a 3-stage pipeline combining RAG retrieval, web search, and a reasoning engine. Used LLMRerank postprocessor (k=50, top-5 re-scored) and an ethical safety guardrail for responsible AI output.</p>
+      <p class="proj-desc">What if an AI could research cleantech topics the way a smart analyst would, checking internal documents first, then searching the web, then reasoning through what it found? That's what I built. Instead of a simple chatbot, this is a system that decides which tool to use at each step, ranks what it finds by relevance, and won't answer questions outside its domain. Think of it as an AI with a job description.</p>
       <div class="proj-tags">
         <span class="proj-tag">Python</span>
         <span class="proj-tag">LlamaIndex</span>
@@ -524,7 +525,7 @@
 
     <div class="proj-card">
       <div class="proj-title">Invoice Information Extraction: Transformer Comparison</div>
-      <p class="proj-desc">Benchmarked LayoutLMv3 and Donut transformers on a structured invoice dataset across template-aware and template-agnostic settings. LayoutLMv3 achieved near-perfect F1 in template-aware conditions using Tesseract OCR and AdamW fine-tuning. Evaluated across token-level precision, recall, F1, and Exact Match Accuracy.</p>
+      <p class="proj-desc">Pulling structured information out of invoices sounds simple until you realize every company formats them differently. I compared two AI models, one that reads invoices like a document (with text), and one that reads them like an image (no text needed). I tested both on thousands of invoices to see which one held up better when the format changed. Turns out, the answer depends on whether the invoice looks familiar or not.</p>
       <div class="proj-tags">
         <span class="proj-tag">LayoutLMv3</span>
         <span class="proj-tag">Donut</span>
@@ -539,7 +540,7 @@
 
     <div class="proj-card">
       <div class="proj-title">Amazon Ratings Recommender System</div>
-      <p class="proj-desc">Queried and processed Amazon electronics data using AWS Athena, stored in Parquet format on S3. Built a collaborative filtering model using PySpark ALS for personalized product recommendations. Designed a scalable pipeline covering data ingestion, model training, and recommendation generation.</p>
+      <p class="proj-desc">You know how Amazon always seems to know what you might want next? I built a smaller version of that. Using real electronics purchase data stored on AWS, I trained a model that learns from patterns in what people buy together to recommend products they'd actually want. The whole thing runs on a cloud pipeline from raw data all the way to recommendations.</p>
       <div class="proj-tags">
         <span class="proj-tag">PySpark</span>
         <span class="proj-tag">AWS Athena</span>
@@ -554,7 +555,7 @@
 
     <div class="proj-card">
       <div class="proj-title">Refugee Asylum Data Analysis</div>
-      <p class="proj-desc">Analyzed 34,600+ UNHCR records to identify nations under high refugee pressure. Applied Random Forest for classification and validated clustering at k=3 using silhouette scoring, revealing 3 distinct country profiles with actionable policy recommendations.</p>
+      <p class="proj-desc">Which countries are under the most pressure from the global refugee crisis and how are they different from each other? I analyzed over 34,000 records from the UN refugee agency to find out. Using machine learning to classify countries by pressure level and clustering to group them by shared characteristics, I ended up with three distinct country profiles, each with a different story and different policy implications.</p>
       <div class="proj-tags">
         <span class="proj-tag">Python</span>
         <span class="proj-tag">Random Forest</span>
@@ -569,7 +570,7 @@
 
     <div class="proj-card">
       <div class="proj-title">FIFA Player Market Value Visualization</div>
-      <p class="proj-desc">Developed a data visualization suite exploring FIFA player market values using R and ggplot2. Built choropleth maps, polynomial-fit scatter plots, and annotated line charts across 18,000+ player records. Applied Gestalt design principles and loess smoothing throughout.</p>
+      <p class="proj-desc">What makes a footballer worth more than others? Age? Position? The country they play in? I dug into data on 18,000+ FIFA players to find visual answers. The result is a set of charts and maps that make the patterns obvious at a glance where the most valuable players come from, how market value shifts with age depending on your position, and which clubs dominate the top tier.</p>
       <div class="proj-tags">
         <span class="proj-tag">R</span>
         <span class="proj-tag">ggplot2</span>
@@ -588,7 +589,6 @@
 <section id="contact">
   <p class="section-label">Say hello</p>
   <h2 class="section-title">Get In Touch</h2>
-  <p class="contact-desc">I'm actively looking for full-time opportunities in Data Analytics, BI, Marketing Analytics, and Data Science. Whether it's a role, a collaboration, or just a conversation, drop me a line.</p>
   <div class="contact-links">
     <a href="mailto:vaish.tiwari03@gmail.com" class="contact-link">
       <span class="contact-icon">✉</span> vaish.tiwari03@gmail.com
@@ -603,7 +603,7 @@
 </section>
 
 <footer>
-  © 2026 Vaishnavi Tiwari · Chicago, IL · Open to hybrid & remote roles
+  © 2026 Vaishnavi Tiwari · Let's build something together
 </footer>
 
 <script>
